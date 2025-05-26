@@ -1,12 +1,12 @@
 {
-	"name": "wintry-mod",
+	"name": "lumi",
 	"private": true,
 	"author": {
-		"name": "wtcord",
-		"url": "https://github.com/wtcord"
+		"name": "cocobo1",
+		"url": "https://github.com/C0C0B01"
 	},
 	"type": "module",
-	"version": "0.1.1",
+	"version": "0.0.1",
 	"dependencies": {
 		"@babel/core": "^7.26.7",
 		"@gullerya/object-observer": "^6.1.3",

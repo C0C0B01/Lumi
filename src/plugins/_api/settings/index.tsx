@@ -100,12 +100,12 @@ export default definePlugin({
         setImmediate(() => {
             // Hack that allows pushing custom pages without having to register the setting renderer
             // by passing the component through the route params
-            registerSettingRenderer("WINTRY_CUSTOM_PAGE", {
+            registerSettingRenderer("LUMI_CUSTOM_PAGE", {
                 type: "route",
                 title: () => "",
                 unsearchable: true,
                 screen: {
-                    route: "WINTRY_CUSTOM_PAGE",
+                    route: "LUMI_CUSTOM_PAGE",
                     getComponent: memoize(() =>
                         memo(() => {
                             const navigation = NavigationNative.useNavigation();
@@ -129,7 +129,7 @@ export default definePlugin({
                     registerSettingRenderer("WINTRY", {
                         type: "route",
                         title: () => t.wintry(),
-                        IconComponent: () => <TableRow.Icon source={require("@assets/ic_wintry.png")} />,
+                        IconComponent: () => <TableRow.Icon source={require("@assets/ic_lumi.png")} />,
                         useTrailing: () => {
                             const availableUpdate = useUpdaterStore(s => s.availableUpdate);
                             if (availableUpdate) return <Tag text={t.updater.update_tag()} />;
@@ -142,21 +142,21 @@ export default definePlugin({
                             getComponent: () => lazy(() => import("@components/Wintry/Settings/pages/Wintry")),
                         },
                     }),
-                    registerSettingRenderer("WINTRY_PLUGINS", {
+                    registerSettingRenderer("LUMI_PLUGINS", {
                         type: "route",
                         title: () => t.settings.sections.plugins(),
                         IconComponent: PuzzlePieceIcon,
                         screen: {
-                            route: "WINTRY_PLUGINS",
+                            route: "LUMI_PLUGINS",
                             getComponent: () => lazy(() => import("@components/Wintry/Settings/pages/Plugins")),
                         },
                     }),
-                    registerSettingRenderer("WINTRY_DEVELOPER", {
+                    registerSettingRenderer("LUMI_DEVELOPER", {
                         type: "route",
                         title: () => t.settings.sections.developer(),
                         IconComponent: WrenchIcon,
                         screen: {
-                            route: "WINTRY_DEVELOPER",
+                            route: "LUMI_DEVELOPER",
                             getComponent: () => lazy(() => import("@components/Wintry/Settings/pages/Developer")),
                         },
                     }),

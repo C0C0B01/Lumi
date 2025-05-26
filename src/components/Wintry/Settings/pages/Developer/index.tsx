@@ -62,7 +62,7 @@ export default function DeveloperPage() {
                     label={tSections.tools.asset_browser.label()}
                     icon={<TableRow.Icon source={findAssetId("ImageIcon")} />}
                     onPress={() =>
-                        navigation.push("WINTRY_CUSTOM_PAGE", {
+                        navigation.push("LUMI_CUSTOM_PAGE", {
                             title: tSections.tools.asset_browser.label(),
                             render: lazy(() => import("./AssetBrowser")),
                         })
@@ -73,7 +73,7 @@ export default function DeveloperPage() {
                     label={"Token Browser"}
                     icon={<TableRow.Icon source={findAssetId("PaintPaletteIcon")} />}
                     onPress={() =>
-                        navigation.push("WINTRY_CUSTOM_PAGE", {
+                        navigation.push("LUMI_CUSTOM_PAGE", {
                             title: "Token Browser",
                             render: lazy(() => import("./TokenBrowser")),
                         })
@@ -86,7 +86,7 @@ export default function DeveloperPage() {
                     label={"Toasts"}
                     icon={<TableRow.Icon source={findAssetId("ChatWarningIcon")} />}
                     onPress={() =>
-                        navigation.push("WINTRY_CUSTOM_PAGE", {
+                        navigation.push("LUMI_CUSTOM_PAGE", {
                             title: "Toast Playground",
                             render: lazy(() => import("./ToastPlayground")),
                         })
@@ -97,7 +97,7 @@ export default function DeveloperPage() {
                     label={"Callouts"}
                     icon={<TableRow.Icon source={findAssetId("WarningIcon")} />}
                     onPress={() =>
-                        navigation.push("WINTRY_CUSTOM_PAGE", {
+                        navigation.push("LUMI_CUSTOM_PAGE", {
                             title: "Callouts Playground",
                             render: lazy(() => import("./CalloutPlayground")),
                         })
@@ -108,7 +108,7 @@ export default function DeveloperPage() {
                     label={"Alerts"}
                     icon={<TableRow.Icon source={findAssetId("WarningIcon")} />}
                     onPress={() =>
-                        navigation.push("WINTRY_CUSTOM_PAGE", {
+                        navigation.push("LUMI_CUSTOM_PAGE", {
                             title: "Alerts Playground",
                             render: lazy(() => import("./AlertsPlayground")),
                         })

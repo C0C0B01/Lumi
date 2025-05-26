@@ -1,4 +1,4 @@
-# Contributing to Wintry
+# Contributing to Lumi
 
 Thank you for taking the time to contribute! All contributions must adhere to our [Code of Conduct](./CODE_OF_CONDUCT.md).
 
@@ -14,7 +14,7 @@ If you encounter a bug, glitch, or any unexpected behavior, please report it by 
 - **Provide a clear title**: A concise summary helps others understand the issue at a glance.
 - **Describe the issue in detail**: Include steps to reproduce, expected behavior, and actual behavior.
 - **Attach relevant logs or screenshots**: If applicable, provide console output, error messages, or images to clarify the issue.
-- **Specify your environment**: Mention your OS, Wintry version, and any other relevant setup details.
+- **Specify your environment**: Mention your OS, Lumi version, and any other relevant setup details.
 
 ### Submit a Contribution
 
@@ -22,7 +22,7 @@ Contributions can be made via pull requests. If you're unfamiliar with Git, chec
 
 #### Write a Plugin
 
-Writing a plugin is the primary way to contribute to Wintry.
+Writing a plugin is the primary way to contribute to Lumi.
 
 Before starting your plugin:
 - Check existing pull requests to see if someone is already working on a similar plugin.
@@ -30,7 +30,6 @@ Before starting your plugin:
 
 #### Plugin Guidelines
 
-- No simple slash command plugins like `/cat`. Instead, make a [user-installable Discord bot](https://discord.com/developers/docs/change-log#userinstallable-apps-preview).
 - No simple text replacement plugins like "Let me Google that for you."
 - No FakeDeafen, FakeMute or any types of plugins can mislead other users and cause unnecessary confusion or moderation issues. 
 - No plugins that interact with specific Discord bots (official Discord apps like YouTube WatchTogether are allowed).
@@ -39,9 +38,9 @@ Before starting your plugin:
 - No plugins requiring users to enter their own API keys.
 - Avoid introducing new dependencies unless absolutely necessary.
 
-#### Improve Wintry Itself
+#### Improve Lumi Itself
 
-If you have ideas for improving Wintry or want to propose a new plugin API, open a feature request to start a discussion.
+If you have ideas for improving Lumi or want to propose a new plugin API, open a feature request to start a discussion.
 
 Found a bug or typo? Feel free to fix it!
 
@@ -49,7 +48,7 @@ Found a bug or typo? Feel free to fix it!
 
 ## Setting Up the Development Environment
 
-To develop Wintry, you need [**Bun**](https://bun.sh/) (v1.2.3+) installed.
+To develop Lumi, you need [**Bun**](https://bun.sh/) (v1.2.3+) installed.
 
 1. Install dependencies:
    ```bash
@@ -67,12 +66,12 @@ To develop Wintry, you need [**Bun**](https://bun.sh/) (v1.2.3+) installed.
 
    Press Ctrl+C to stop the server.
    ```
-1. Ensure your client is on the same network and has Wintry installed.
-1. Configure Wintry:
-   - Navigate to **Settings > Developer (under Wintry section)**.
+1. Ensure your client is on the same network and has Lumi installed.
+1. Configure Lumi:
+   - Navigate to **Settings > Developer (under Lumi section)**.
    - Set **Custom Endpoint** to your server.
-   - Make sure to enable **Force Update** and **Automatic Updates** (under **Wintry > Wintry Info**).
-1. Reload the Wintry client. If successful, you should see output in the server console:
+   - Make sure to enable **Force Update** and **Automatic Updates** (under **Lumi > Lumi Info**).
+1. Reload the Lumi client. If successful, you should see output in the server console:
    ```
    Rebuilding /bundle.96.hbc...
    Bundle compilation took: 626.08ms

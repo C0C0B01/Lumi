@@ -52,27 +52,11 @@ function getAndroidDebugInfo() {
     };
 }
 
-function getIOSDebugInfo() {
-    const PlatformConstants = Platform.constants as PlatformIOSStatic["constants"];
-    return {
-        os: {
-            name: PlatformConstants.systemName,
-            version: PlatformConstants.osVersion,
-        },
-        device: {
-            manufacturer: NativeDeviceModule.deviceManufacturer,
-            brand: NativeDeviceModule.deviceBrand,
-            model: NativeDeviceModule.deviceModel,
-        },
-    };
-}
-
 export function getDebugInfo() {
     return {
         ...getVersions(),
         ...Platform.select({
             android: getAndroidDebugInfo(),
-            ios: getIOSDebugInfo(),
         })!,
     };
 }

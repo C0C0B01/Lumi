@@ -56,7 +56,7 @@ export default function ToastPlayground() {
         };
 
         if (toastConfig.showIcon) {
-            options.icon = require("@assets/ic_wintry.png");
+            options.icon = require("@assets/ic_lumi.png");
         }
 
         if (toastConfig.updateAfterDelay) {

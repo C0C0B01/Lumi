@@ -32,9 +32,9 @@ export default function WintryPage() {
                         tag={updateAvailable ? t.updater.update_tag() : undefined}
                         style={{ flex: 1 }}
                         trailing={`${bunny.version}-${bunny.shortRevision}\n(${bunny.branch})`}
-                        icon={<TableRow.Icon source={require("@assets/ic_wintry.png")} />}
+                        icon={<TableRow.Icon source={require("@assets/ic_lumi.png")} />}
                         onPress={() => {
-                            navigation.push("WINTRY_CUSTOM_PAGE", {
+                            navigation.push("LUMI_CUSTOM_PAGE", {
                                 title: t.wintry(),
                                 render: lazy(() => import("../Updater")),
                             });
@@ -54,7 +54,7 @@ export default function WintryPage() {
                     arrow={true}
                     label={t.settings.general.logs()}
                     onPress={() =>
-                        navigation.push("WINTRY_CUSTOM_PAGE", {
+                        navigation.push("LUMI_CUSTOM_PAGE", {
                             title: t.settings.general.logs(),
                             render: lazy(() => import("../Logs")),
                         })
@@ -96,7 +96,7 @@ export default function WintryPage() {
                                     {
                                         text: t.actions.nevermind(),
                                         variant: "secondary",
-                                        onPress: () => {},
+                                        onPress: () => { },
                                     },
                                 ],
                             });
@@ -120,13 +120,6 @@ export default function WintryPage() {
                     arrow={true}
                     trailing={<TableRow.TrailingText text={Links.DISCORD} />}
                     onPress={() => openURL(`https://${Links.DISCORD}`)}
-                />
-                <TableRow
-                    label={t.settings.general.x()}
-                    icon={<TableRow.Icon source={findAssetId("img_account_sync_x_light")} />}
-                    arrow={true}
-                    trailing={<TableRow.TrailingText text={Links.X} />}
-                    onPress={() => openURL(`https://${Links.X}`)}
                 />
             </TableRowGroup>
         </PageWrapper>

@@ -13,7 +13,7 @@ export default function TokenBrowser() {
                     label="Colors"
                     arrow={true}
                     onPress={() => {
-                        navigation.push("WINTRY_CUSTOM_PAGE", {
+                        navigation.push("LUMI_CUSTOM_PAGE", {
                             title: "Colors",
                             render: lazy(() => import("./Colors")),
                         });

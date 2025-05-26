@@ -1,0 +1,8 @@
+{
+  "paths": [
+    "dist/bundle.js",
+    "dist/bundle.96.hbc"
+  ],
+  "version": "0.0.1",
+  "hash": "c28010f7d43e543c03468f3d6ec9b355bd543efe1726076b1730ca647dcd8836"
+}

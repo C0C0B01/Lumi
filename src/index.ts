@@ -9,7 +9,7 @@ Object.freeze = Object.seal = Object;
 
 export function initializeWintry() {
     try {
-        wtlogger.info("Initializing Wintry...");
+        wtlogger.info("Initializing Lumi...");
 
         initializeMetro();
         initializePlugins();
@@ -18,7 +18,7 @@ export function initializeWintry() {
 
         window.wintry = wintryGlobalObject();
 
-        wtlogger.info(`Fully initialized Wintry in ${(nativePerformanceNow() - WINTRY_START_TIME).toFixed(2)}ms!`);
+        wtlogger.info(`Fully initialized Lumi in ${(nativePerformanceNow() - WINTRY_START_TIME).toFixed(2)}ms!`);
     } catch (e) {
         reportErrorOnInitialization(e);
     }

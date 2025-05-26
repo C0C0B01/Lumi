@@ -3,7 +3,7 @@ import Button from "@components/Discord/Button/Button";
 import PageWrapper from "@components/Wintry/Settings/PageWrapper";
 import { t } from "@i18n";
 import { getVersions } from "@debug/info";
-import {} from "@components/Discord/AlertModal/AlertModal";
+import { } from "@components/Discord/AlertModal/AlertModal";
 import { findAssetId } from "@api/assets";
 import { View } from "react-native";
 import {
@@ -41,7 +41,7 @@ export default function UpdaterPage() {
             <TableRowGroup title={t.settings.updater.info()}>
                 <TableRow
                     label={t.wintry()}
-                    icon={<TableRow.Icon source={require("@assets/ic_wintry.png")} />}
+                    icon={<TableRow.Icon source={require("@assets/ic_lumi.png")} />}
                     trailing={
                         <TableRow.TrailingText text={`${bunny.version}-${bunny.shortRevision} (${bunny.branch})`} />
                     }

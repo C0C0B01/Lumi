@@ -15,7 +15,7 @@ const setupWebsocketConnection = (): Promise<WebSocket> => {
             socket.send(
                 JSON.stringify({
                     type: "handshake",
-                    client: "Wintry",
+                    client: "Lumi",
                     logBuffer: wtlogger.logs,
                 }),
             );

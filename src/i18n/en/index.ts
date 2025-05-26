@@ -2,7 +2,7 @@ import type { BaseTranslation } from "../i18n-types.js";
 
 const en = {
     discord: "Discord",
-    wintry: "Wintry",
+    wintry: "Lumi",
     ui: {
         components: {
             search: {
@@ -22,7 +22,7 @@ const en = {
             show_less: "Show less",
             component_stack: "Component Stack",
             call_stack: "Call Stack",
-            description: "An error occurred while rendering a component. This may have been caused by a plugin, Wintry, or Discord itself.",
+            description: "An error occurred while rendering a component. This may have been caused by a plugin, Lumi, or Discord itself.",
         }
     },
     actions: {
@@ -33,7 +33,7 @@ const en = {
     updater: {
         update_tag: "Update",
         update_available: "Update Available",
-        new_version: "A new version of Wintry is available!",
+        new_version: "A new version of Lumi is available!",
         update_now: "Update Now",
         update_and_restart: "Update and Restart",
         already_latest: "You're already on the latest version!",
@@ -56,7 +56,6 @@ const en = {
             links: "Links",
             github: "GitHub",
             discord: "Discord",
-            x: "X",
             react: "React",
             react_native: "React Native",
             hermes: "Hermes",

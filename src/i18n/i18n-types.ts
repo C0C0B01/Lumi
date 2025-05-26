@@ -180,10 +180,6 @@ type RootTranslation = {
 			 */
 			discord: string
 			/**
-			 * X
-			 */
-			x: string
-			/**
 			 * R​e​a​c​t
 			 */
 			react: string
@@ -552,10 +548,6 @@ export type TranslationFunctions = {
 			 * Discord
 			 */
 			discord: () => LocalizedString
-			/**
-			 * X
-			 */
-			x: () => LocalizedString
 			/**
 			 * React
 			 */
