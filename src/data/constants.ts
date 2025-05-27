@@ -8,7 +8,7 @@ export const Devs = {
         name: "pylix",
         id: 492949202121261067n,
     },
-    Cocobo1: {
+    C0C0B01: {
         name: "cocobo1",
         id: 767650984175992833n,
     },

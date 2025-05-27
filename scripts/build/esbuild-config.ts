@@ -42,7 +42,7 @@ export async function getEsbuildConfig({ deploy = false, minify = false }): Prom
             ].join(" "),
         },
         footer: {
-            js: "//# sourceURL=wintry",
+            js: "//# sourceURL=lumi",
         },
         platform: "browser",
         define: {

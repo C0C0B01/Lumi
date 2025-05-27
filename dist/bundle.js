@@ -7592,7 +7592,7 @@ var WINTRY_START_TIME = nativePerformanceNow(); var window = typeof globalThis !
           name: "pylix",
           id: 492949202121261067n
         },
-        Cocobo1: {
+        C0C0B01: {
           name: "cocobo1",
           id: 767650984175992833n
         }
@@ -9735,10 +9735,10 @@ ${inspect({
   var revision, branch, remote, version;
   var init_build_info = __esm({
     "build-info:#build-info"() {
-      revision = "872a4b5b347fad581d37f91d6f25eda84ad5239a";
+      revision = "ae37b98cc691a36cc9ca6745b6964e440893fcf4";
       branch = "main";
       remote = "C0C0B01/Lumi";
-      version = "0.0.1";
+      version = "v0.0.1";
     }
   });
 
@@ -16698,4 +16698,4 @@ ${log.errorStack}`;
     (init_error_reporter(), __toCommonJS(error_reporter_exports)).default(e3);
   }
 })();
-//# sourceURL=wintry
+//# sourceURL=lumi
