@@ -6132,24 +6132,6 @@ var WINTRY_START_TIME = nativePerformanceNow(); var window = typeof globalThis !
     }
   });
 
-  // src/utils/network/url.ts
-  var url_exports = {};
-  __export(url_exports, {
-    openURL: () => openURL
-  });
-  function openURL(url) {
-    urlModule.openURL(url);
-  }
-  var urlModule;
-  var init_url = __esm({
-    "src/utils/network/url.ts"() {
-      "use strict";
-      init_wrappers();
-      urlModule = lookupByProps("openURL", "openDeeplink").asLazy((m2) => urlModule = m2);
-      __name(openURL, "openURL");
-    }
-  });
-
   // src/utils/errors/isError.ts
   var isError_exports = {};
   __export(isError_exports, {
@@ -9735,10 +9717,10 @@ ${inspect({
   var revision, branch, remote, version;
   var init_build_info = __esm({
     "build-info:#build-info"() {
-      revision = "ae37b98cc691a36cc9ca6745b6964e440893fcf4";
+      revision = "9f37790d87697418545a17af0e428c963a5a0b3e";
       branch = "main";
       remote = "C0C0B01/Lumi";
-      version = "v0.0.1";
+      version = "v0.1.0";
     }
   });
 
@@ -11695,7 +11677,7 @@ ${log.errorStack}`;
               trailing: /* @__PURE__ */ jsx(TableRow_default.TrailingText, {
                 text: Links.GITHUB
               }),
-              onPress: /* @__PURE__ */ __name(() => openURL(`https://${Links.GITHUB}`), "onPress")
+              onPress: /* @__PURE__ */ __name(() => import_react_native21.Linking.openURL(`https://${Links.GITHUB}`), "onPress")
             }),
             /* @__PURE__ */ jsx(TableRow_default, {
               label: t3.settings.general.discord(),
@@ -11706,14 +11688,14 @@ ${log.errorStack}`;
               trailing: /* @__PURE__ */ jsx(TableRow_default.TrailingText, {
                 text: Links.DISCORD
               }),
-              onPress: /* @__PURE__ */ __name(() => openURL(`https://${Links.DISCORD}`), "onPress")
+              onPress: /* @__PURE__ */ __name(() => import_react_native21.Linking.openURL(`https://${Links.DISCORD}`), "onPress")
             })
           ]
         })
       ]
     });
   }
-  var import_react_native20, import_react10;
+  var import_react_native20, import_react10, import_react_native21;
   var init_Wintry = __esm({
     "src/components/Wintry/Settings/pages/Wintry/index.tsx"() {
       "use strict";
@@ -11733,10 +11715,10 @@ ${log.errorStack}`;
       init_ClientInfoSheet();
       init_alerts();
       init_native();
-      init_url();
       init_constants();
       init_useInitConfigStore();
       init_useUpdaterStore();
+      import_react_native21 = __toESM(require_react_native(), 1);
       __name(WintryPage, "WintryPage");
     }
   });
@@ -11751,7 +11733,7 @@ ${log.errorStack}`;
     var backgroundColor = useToken(tokens.colors[config.background]);
     var borderColor = useToken(tokens.colors[config.foreground]);
     var IconComponent = config.Icon;
-    return /* @__PURE__ */ jsxs(import_react_native21.View, {
+    return /* @__PURE__ */ jsxs(import_react_native22.View, {
       style: {
         padding: 16,
         backgroundColor,
@@ -11761,7 +11743,7 @@ ${log.errorStack}`;
         rowGap: 8
       },
       children: [
-        /* @__PURE__ */ jsxs(import_react_native21.View, {
+        /* @__PURE__ */ jsxs(import_react_native22.View, {
           style: {
             flexDirection: "row",
             alignItems: "center",
@@ -11788,13 +11770,13 @@ ${log.errorStack}`;
       ]
     });
   }
-  var import_react_native21, CALLOUT_VARIANT_CONFIG;
+  var import_react_native22, CALLOUT_VARIANT_CONFIG;
   var init_Callout = __esm({
     "src/components/Wintry/Callout.tsx"() {
       "use strict";
       init_jsxRuntime();
       init_libraries();
-      import_react_native21 = __toESM(require_react_native(), 1);
+      import_react_native22 = __toESM(require_react_native(), 1);
       init_Discord2();
       init_icons();
       CALLOUT_VARIANT_CONFIG = {
@@ -11834,7 +11816,7 @@ ${log.errorStack}`;
   });
   function ResponsiveMasonryFlashList(props) {
     var minWidth = props.itemMinWidth;
-    var dimensions = (0, import_react_native22.useWindowDimensions)();
+    var dimensions = (0, import_react_native23.useWindowDimensions)();
     var listProps = (0, import_react11.useMemo)(() => omit(props, [
       "data",
       "renderItem"
@@ -11849,7 +11831,7 @@ ${log.errorStack}`;
     var renderItem = (0, import_react11.useCallback)((info) => {
       var { columnIndex } = info;
       var Item = props.renderItem;
-      return /* @__PURE__ */ jsx(import_react_native22.View, {
+      return /* @__PURE__ */ jsx(import_react_native23.View, {
         style: {
           minWidth,
           paddingRight: columnIndex === numColumns - 1 ? 0 : 4,
@@ -11871,13 +11853,13 @@ ${log.errorStack}`;
       ...listProps
     });
   }
-  var import_react11, import_react_native22, import_flash_list3;
+  var import_react11, import_react_native23, import_flash_list3;
   var init_ResponsiveMasonryFlashList = __esm({
     "src/components/Wintry/Settings/pages/ResponsiveMasonryFlashList.tsx"() {
       "use strict";
       init_jsxRuntime();
       import_react11 = __toESM(require_react(), 1);
-      import_react_native22 = __toESM(require_react_native(), 1);
+      import_react_native23 = __toESM(require_react_native(), 1);
       init_dist();
       import_flash_list3 = __toESM(require_flash_list(), 1);
       __name(ResponsiveMasonryFlashList, "ResponsiveMasonryFlashList");
@@ -11972,7 +11954,7 @@ ${log.errorStack}`;
   });
   function CardHeader({ addon }) {
     var HeaderText = useHighlightedSearchTerm(0);
-    return /* @__PURE__ */ jsx(import_react_native23.View, {
+    return /* @__PURE__ */ jsx(import_react_native24.View, {
       style: {
         flexDirection: "row",
         alignItems: "center",
@@ -11986,7 +11968,7 @@ ${log.errorStack}`;
   function CardDevs({ addon }) {
     if (!addon.authors) return null;
     var DevText = useHighlightedSearchTerm(2);
-    return /* @__PURE__ */ jsx(import_react_native23.View, {
+    return /* @__PURE__ */ jsx(import_react_native24.View, {
       style: {
         flexDirection: "row",
         flexWrap: "wrap",
@@ -12014,7 +11996,7 @@ ${log.errorStack}`;
     });
   }
   function CardActions({ addon, pageProps }) {
-    return /* @__PURE__ */ jsx(import_react_native23.View, {
+    return /* @__PURE__ */ jsx(import_react_native24.View, {
       style: {
         flexDirection: "row",
         gap: 6
@@ -12030,7 +12012,7 @@ ${log.errorStack}`;
   function CardSwitch({ addon, pageProps }) {
     var canToggle = pageProps.useCanHandleAddon(addon.$id);
     var [enabled, setEnabled] = pageProps.useToggler(addon.$id);
-    return /* @__PURE__ */ jsx(import_react_native23.View, {
+    return /* @__PURE__ */ jsx(import_react_native24.View, {
       children: /* @__PURE__ */ jsx(FormSwitch_default, {
         value: enabled,
         disabled: !canToggle,
@@ -12051,13 +12033,13 @@ ${log.errorStack}`;
       children: /* @__PURE__ */ jsxs(Stack_default, {
         spacing: 8,
         children: [
-          /* @__PURE__ */ jsxs(import_react_native23.View, {
+          /* @__PURE__ */ jsxs(import_react_native24.View, {
             style: {
               flexDirection: "row",
               justifyContent: "space-between"
             },
             children: [
-              /* @__PURE__ */ jsxs(import_react_native23.View, {
+              /* @__PURE__ */ jsxs(import_react_native24.View, {
                 style: {
                   flexShrink: 1
                 },
@@ -12070,7 +12052,7 @@ ${log.errorStack}`;
                   })
                 ]
               }),
-              /* @__PURE__ */ jsx(import_react_native23.View, {
+              /* @__PURE__ */ jsx(import_react_native24.View, {
                 children: /* @__PURE__ */ jsxs(Stack_default, {
                   spacing: 12,
                   direction: "horizontal",
@@ -12093,12 +12075,12 @@ ${log.errorStack}`;
       })
     });
   }
-  var import_react_native23;
+  var import_react_native24;
   var init_AddonCard = __esm({
     "src/components/Wintry/Settings/pages/Addon/AddonCard.tsx"() {
       "use strict";
       init_jsxRuntime();
-      import_react_native23 = __toESM(require_react_native(), 1);
+      import_react_native24 = __toESM(require_react_native(), 1);
       init_assets();
       init_IconButton();
       init_FormSwitch();
@@ -12139,7 +12121,7 @@ ${log.errorStack}`;
           })
         }), "renderItem"),
         ItemSeparatorComponent: ItemSeparator,
-        ListHeaderComponent: /* @__PURE__ */ jsxs(import_react_native24.View, {
+        ListHeaderComponent: /* @__PURE__ */ jsxs(import_react_native25.View, {
           style: {
             gap: 8
           },
@@ -12165,20 +12147,20 @@ ${log.errorStack}`;
       })
     });
   }
-  var import_react_native24, ItemSeparator;
+  var import_react_native25, ItemSeparator;
   var init_Addon = __esm({
     "src/components/Wintry/Settings/pages/Addon/index.tsx"() {
       "use strict";
       init_jsxRuntime();
       init_Callout();
       init_i18n();
-      import_react_native24 = __toESM(require_react_native(), 1);
+      import_react_native25 = __toESM(require_react_native(), 1);
       init_PageWrapper();
       init_ResponsiveMasonryFlashList();
       init_AddonCard();
       init_SearchTermHighlight();
       init_loader();
-      ItemSeparator = /* @__PURE__ */ __name(() => /* @__PURE__ */ jsx(import_react_native24.View, {
+      ItemSeparator = /* @__PURE__ */ __name(() => /* @__PURE__ */ jsx(import_react_native25.View, {
         style: {
           height: 8
         }
@@ -12916,7 +12898,7 @@ ${log.errorStack}`;
     useSearchQuery: () => useSearchQuery
   });
   function SearchIcon() {
-    return /* @__PURE__ */ jsx(import_react_native25.Image, {
+    return /* @__PURE__ */ jsx(import_react_native26.Image, {
       style: {
         width: 16,
         height: 16
@@ -12932,13 +12914,13 @@ ${log.errorStack}`;
     };
     return ref;
   }
-  var import_react13, import_react_native25, Search_default;
+  var import_react13, import_react_native26, Search_default;
   var init_Search = __esm({
     "src/components/Wintry/Search.tsx"() {
       "use strict";
       init_jsxRuntime();
       import_react13 = __toESM(require_react(), 1);
-      import_react_native25 = __toESM(require_react_native(), 1);
+      import_react_native26 = __toESM(require_react_native(), 1);
       init_i18n();
       init_assets();
       init_TextInput();
@@ -12951,7 +12933,7 @@ ${log.errorStack}`;
           onChangeText?.(value);
           queryRef?.__set(value);
         }, "onChange");
-        return /* @__PURE__ */ jsx(import_react_native25.View, {
+        return /* @__PURE__ */ jsx(import_react_native26.View, {
           style,
           children: /* @__PURE__ */ jsx(TextInput_default, {
             grow: true,
@@ -12991,7 +12973,7 @@ ${log.errorStack}`;
     FilterAndSortBar: () => FilterAndSortBar
   });
   function FilterAndSortBar({ queryRef, sortOptions, filterOptions, onSortChange, onFilterChange, currentFilterOptions, currentSortOption, style }) {
-    return /* @__PURE__ */ jsxs(import_react_native26.View, {
+    return /* @__PURE__ */ jsxs(import_react_native27.View, {
       style: [
         {
           flexDirection: "row",
@@ -13034,7 +13016,7 @@ ${log.errorStack}`;
       ]
     });
   }
-  var import_react_native26;
+  var import_react_native27;
   var init_FilterAndSortBar = __esm({
     "src/components/Wintry/FilterAndSortBar.tsx"() {
       "use strict";
@@ -13042,7 +13024,7 @@ ${log.errorStack}`;
       init_assets();
       init_Discord2();
       init_ContextMenu();
-      import_react_native26 = __toESM(require_react_native(), 1);
+      import_react_native27 = __toESM(require_react_native(), 1);
       init_Search();
       __name(FilterAndSortBar, "FilterAndSortBar");
     }
@@ -13199,30 +13181,30 @@ ${log.errorStack}`;
       for (var author of authors) _loop(author);
       authorTextNode.pop();
     }
-    return /* @__PURE__ */ jsxs(import_react_native27.View, {
+    return /* @__PURE__ */ jsxs(import_react_native28.View, {
       style: {
         gap: 6,
         width: "80%"
       },
       children: [
-        /* @__PURE__ */ jsxs(import_react_native27.View, {
+        /* @__PURE__ */ jsxs(import_react_native28.View, {
           style: {
             gap: 4,
             flexDirection: "column-reverse"
           },
           children: [
-            /* @__PURE__ */ jsx(import_react_native27.View, {
+            /* @__PURE__ */ jsx(import_react_native28.View, {
               children: /* @__PURE__ */ jsx(Text_default, {
                 variant: "heading-xl/semibold",
                 children: plugin.name
               })
             }),
-            /* @__PURE__ */ jsx(import_react_native27.View, {
+            /* @__PURE__ */ jsx(import_react_native28.View, {
               style: {
                 flexDirection: "row",
                 flexShrink: 1
               },
-              children: authors?.length && /* @__PURE__ */ jsxs(import_react_native27.View, {
+              children: authors?.length && /* @__PURE__ */ jsxs(import_react_native28.View, {
                 style: styles.devsPill,
                 children: [
                   users.length && /* @__PURE__ */ jsx(AvatarPile_default, {
@@ -13254,12 +13236,12 @@ ${log.errorStack}`;
       ]
     });
   }
-  var import_react_native27, showUserProfileActionSheet, useStyles3, maybeFetchUser;
+  var import_react_native28, showUserProfileActionSheet, useStyles3, maybeFetchUser;
   var init_TitleComponent = __esm({
     "src/components/Wintry/Settings/pages/Plugins/TitleComponent.tsx"() {
       "use strict";
       init_jsxRuntime();
-      import_react_native27 = __toESM(require_react_native(), 1);
+      import_react_native28 = __toESM(require_react_native(), 1);
       init_lazy();
       init_stores();
       init_wrappers();
@@ -13379,7 +13361,7 @@ ${log.errorStack}`;
     return /* @__PURE__ */ jsx(TableRow_default, {
       start,
       end,
-      label: /* @__PURE__ */ jsxs(import_react_native28.View, {
+      label: /* @__PURE__ */ jsxs(import_react_native29.View, {
         style: {
           paddingHorizontal: 6,
           gap: 4
@@ -13404,7 +13386,7 @@ ${log.errorStack}`;
       icon: getIcon2(opt.icon)
     });
   }
-  var import_react_native28;
+  var import_react_native29;
   var init_StringOptionRow = __esm({
     "src/components/Wintry/Settings/pages/Plugins/options/StringOptionRow.tsx"() {
       "use strict";
@@ -13414,7 +13396,7 @@ ${log.errorStack}`;
       init_Discord2();
       init_TextArea();
       init_TextInput();
-      import_react_native28 = __toESM(require_react_native(), 1);
+      import_react_native29 = __toESM(require_react_native(), 1);
       __name(StringOptionRow, "StringOptionRow");
     }
   });
@@ -13624,7 +13606,7 @@ ${log.errorStack}`;
             })
           ]
         }),
-        /* @__PURE__ */ jsx(import_react_native29.View, {
+        /* @__PURE__ */ jsx(import_react_native30.View, {
           style: {
             paddingVertical: 12
           },
@@ -13635,11 +13617,11 @@ ${log.errorStack}`;
             maximumValue: opt.points.length - 1,
             // onSlidingComplete={updateValue}
             onValueChange: updateValue,
-            startIcon: /* @__PURE__ */ jsx(import_react_native29.Pressable, {
+            startIcon: /* @__PURE__ */ jsx(import_react_native30.Pressable, {
               onPress: /* @__PURE__ */ __name(() => updateValue(currentIndex - 1), "onPress"),
               children: /* @__PURE__ */ jsx(CircleMinusIcon, {})
             }),
-            endIcon: /* @__PURE__ */ jsx(import_react_native29.Pressable, {
+            endIcon: /* @__PURE__ */ jsx(import_react_native30.Pressable, {
               onPress: /* @__PURE__ */ __name(() => updateValue(currentIndex + 1), "onPress"),
               children: /* @__PURE__ */ jsx(CirclePlusIcon, {})
             })
@@ -13657,12 +13639,12 @@ ${log.errorStack}`;
       settingKey
     });
   }
-  var import_react_native29;
+  var import_react_native30;
   var init_SliderOptionRow = __esm({
     "src/components/Wintry/Settings/pages/Plugins/options/SliderOptionRow.tsx"() {
       "use strict";
       init_jsxRuntime();
-      import_react_native29 = __toESM(require_react_native(), 1);
+      import_react_native30 = __toESM(require_react_native(), 1);
       init_usePluginSettings();
       init_icons();
       init_Slider();
@@ -13738,12 +13720,12 @@ ${log.errorStack}`;
     if (options.length === 0) return null;
     return /* @__PURE__ */ jsx(InfoSection, {
       label: t3.settings.plugins.info_sheet.configurations(),
-      children: /* @__PURE__ */ jsx(import_react_native30.View, {
+      children: /* @__PURE__ */ jsx(import_react_native31.View, {
         style: {
           gap: 12
         },
-        children: options.map((group, i2) => /* @__PURE__ */ jsx(import_react_native30.View, {
-          children: group.map(([key, opt], i3) => /* @__PURE__ */ jsx(import_react_native30.View, {
+        children: options.map((group, i2) => /* @__PURE__ */ jsx(import_react_native31.View, {
+          children: group.map(([key, opt], i3) => /* @__PURE__ */ jsx(import_react_native31.View, {
             children: /* @__PURE__ */ jsx(OptionDefRow, {
               opt,
               plugin,
@@ -13756,7 +13738,7 @@ ${log.errorStack}`;
       })
     });
   }
-  var import_react_native30;
+  var import_react_native31;
   var init_OptionSection = __esm({
     "src/components/Wintry/Settings/pages/Plugins/options/OptionSection.tsx"() {
       "use strict";
@@ -13764,7 +13746,7 @@ ${log.errorStack}`;
       init_i18n();
       init_utils();
       init_InfoSection();
-      import_react_native30 = __toESM(require_react_native(), 1);
+      import_react_native31 = __toESM(require_react_native(), 1);
       init_OptionDefRow();
       __name(getGroupedOptions, "getGroupedOptions");
       __name(OptionSection, "OptionSection");
@@ -13894,7 +13876,7 @@ ${log.errorStack}`;
           marginBottom: 24
         },
         children: [
-          /* @__PURE__ */ jsxs(import_react_native31.View, {
+          /* @__PURE__ */ jsxs(import_react_native32.View, {
             style: {
               flexDirection: "row",
               alignItems: "center",
@@ -13929,7 +13911,7 @@ ${log.errorStack}`;
             ]
           }),
           false,
-          /* @__PURE__ */ jsx(import_react_native31.View, {
+          /* @__PURE__ */ jsx(import_react_native32.View, {
             style: {
               gap: 12
             },
@@ -13941,12 +13923,12 @@ ${log.errorStack}`;
       })
     });
   }
-  var import_react_native31;
+  var import_react_native32;
   var init_PluginSheetComponent = __esm({
     "src/components/Wintry/Settings/pages/Plugins/PluginSheetComponent.tsx"() {
       "use strict";
       init_jsxRuntime();
-      import_react_native31 = __toESM(require_react_native(), 1);
+      import_react_native32 = __toESM(require_react_native(), 1);
       init_assets();
       init_TitleComponent();
       init_i18n();
@@ -14076,14 +14058,14 @@ ${log.errorStack}`;
       ]
     });
   }
-  var import_react14, import_react_native32, import_flash_list4, IMAGE_TYPES, DEFAULT_IMAGE_SIZE, isAssetTypeAnImage, BasicAssetDisplay, ImageAssetDisplay, AssetDisplay, ImageAssetPreviewer, sortAssets;
+  var import_react14, import_react_native33, import_flash_list4, IMAGE_TYPES, DEFAULT_IMAGE_SIZE, isAssetTypeAnImage, BasicAssetDisplay, ImageAssetDisplay, AssetDisplay, ImageAssetPreviewer, sortAssets;
   var init_AssetBrowser = __esm({
     "src/components/Wintry/Settings/pages/Developer/AssetBrowser.tsx"() {
       "use strict";
       init_jsxRuntime();
       import_react14 = __toESM(require_react(), 1);
       init_assets();
-      import_react_native32 = __toESM(require_react_native(), 1);
+      import_react_native33 = __toESM(require_react_native(), 1);
       init_sheets();
       init_Search();
       init_PageWrapper();
@@ -14118,7 +14100,7 @@ ${log.errorStack}`;
         onPress: /* @__PURE__ */ __name(() => showSheet("ImageAssetPreviewer", ImageAssetPreviewer, {
           asset
         }), "onPress"),
-        trailing: /* @__PURE__ */ jsx(import_react_native32.Image, {
+        trailing: /* @__PURE__ */ jsx(import_react_native33.Image, {
           source: asset.id,
           style: {
             width: Math.min(asset.width ?? DEFAULT_IMAGE_SIZE, DEFAULT_IMAGE_SIZE),
@@ -14133,7 +14115,7 @@ ${log.errorStack}`;
         ...props
       }), "AssetDisplay");
       ImageAssetPreviewer = /* @__PURE__ */ __name(({ asset }) => {
-        var width = (0, import_react_native32.useWindowDimensions)().width - 24;
+        var width = (0, import_react_native33.useWindowDimensions)().width - 24;
         var imageSize = {
           width: Math.min(width, asset.width ?? DEFAULT_IMAGE_SIZE),
           height: Math.min(width, asset.height ?? DEFAULT_IMAGE_SIZE)
@@ -14144,12 +14126,12 @@ ${log.errorStack}`;
           },
           children: /* @__PURE__ */ jsxs(Stack_default, {
             children: [
-              /* @__PURE__ */ jsx(import_react_native32.View, {
+              /* @__PURE__ */ jsx(import_react_native33.View, {
                 style: {
                   alignItems: "center",
                   paddingVertical: 24
                 },
-                children: /* @__PURE__ */ jsx(import_react_native32.Image, {
+                children: /* @__PURE__ */ jsx(import_react_native33.Image, {
                   source: asset.id,
                   style: imageSize,
                   resizeMode: "contain"
@@ -14199,7 +14181,7 @@ ${log.errorStack}`;
       label: token,
       start,
       end,
-      trailing: /* @__PURE__ */ jsx(import_react_native33.View, {
+      trailing: /* @__PURE__ */ jsx(import_react_native34.View, {
         style: {
           width: 24,
           height: 24,
@@ -14228,7 +14210,7 @@ ${log.errorStack}`;
       })
     });
   }
-  var import_flash_list5, import_react_native33;
+  var import_flash_list5, import_react_native34;
   var init_Colors = __esm({
     "src/components/Wintry/Settings/pages/Developer/TokenBrowser/Colors.tsx"() {
       "use strict";
@@ -14237,7 +14219,7 @@ ${log.errorStack}`;
       init_PageWrapper();
       init_libraries();
       import_flash_list5 = __toESM(require_flash_list(), 1);
-      import_react_native33 = __toESM(require_react_native(), 1);
+      import_react_native34 = __toESM(require_react_native(), 1);
       __name(ColorRow, "ColorRow");
       __name(Colors, "Colors");
     }
@@ -14294,7 +14276,7 @@ ${log.errorStack}`;
         clearInterval(interval);
       };
     }, []);
-    return /* @__PURE__ */ jsxs(import_react_native34.View, {
+    return /* @__PURE__ */ jsxs(import_react_native35.View, {
       style: {
         gap: 8,
         paddingHorizontal: 12
@@ -14352,7 +14334,7 @@ ${log.errorStack}`;
       var toast = showToast(options);
     }, "handleShowToast");
     return /* @__PURE__ */ jsx(PageWrapper, {
-      children: /* @__PURE__ */ jsxs(import_react_native34.ScrollView, {
+      children: /* @__PURE__ */ jsxs(import_react_native35.ScrollView, {
         contentContainerStyle: {
           gap: 12
         },
@@ -14438,7 +14420,7 @@ ${log.errorStack}`;
               var toast = showToast({
                 id: "loading-toast",
                 text: "Loading...",
-                icon: /* @__PURE__ */ jsx(import_react_native34.ActivityIndicator, {}),
+                icon: /* @__PURE__ */ jsx(import_react_native35.ActivityIndicator, {}),
                 dismissible: false
               });
               setTimeout(() => {
@@ -14454,7 +14436,7 @@ ${log.errorStack}`;
       })
     });
   }
-  var import_react16, import_react_native34, logger11;
+  var import_react16, import_react_native35, logger11;
   var init_ToastPlayground = __esm({
     "src/components/Wintry/Settings/pages/Developer/ToastPlayground.tsx"() {
       "use strict";
@@ -14464,7 +14446,7 @@ ${log.errorStack}`;
       init_Discord2();
       init_PageWrapper();
       import_react16 = __toESM(require_react(), 1);
-      import_react_native34 = __toESM(require_react_native(), 1);
+      import_react_native35 = __toESM(require_react_native(), 1);
       logger11 = wtlogger.createChild("ToastPlayground");
       __name(DemoToastComponent, "DemoToastComponent");
       __name(ToastPlayground, "ToastPlayground");
@@ -15042,7 +15024,7 @@ ${log.errorStack}`;
       return null;
     }
     if (typeof icon === "number" || typeof icon === "object" && "uri" in icon) {
-      return /* @__PURE__ */ jsx(import_react_native35.Image, {
+      return /* @__PURE__ */ jsx(import_react_native36.Image, {
         style: {
           width: 18,
           height: 18
@@ -15066,13 +15048,13 @@ ${log.errorStack}`;
     var onTextLayout = /* @__PURE__ */ __name(({ nativeEvent }) => {
       setIsMultiline(nativeEvent.lines.length > 1);
     }, "onTextLayout");
-    return /* @__PURE__ */ jsx(import_react_native35.View, {
+    return /* @__PURE__ */ jsx(import_react_native36.View, {
       style: [
         isMultiline && {
           paddingHorizontal: 12
         }
       ],
-      children: /* @__PURE__ */ jsxs(import_react_native35.View, {
+      children: /* @__PURE__ */ jsxs(import_react_native36.View, {
         style: {
           flexDirection: "row",
           alignItems: "center",
@@ -15127,7 +15109,7 @@ ${log.errorStack}`;
     }
     throw new Error("Invalid toast type");
   }
-  var import_react20, import_react_native35;
+  var import_react20, import_react_native36;
   var init_ToastContentRenderer = __esm({
     "src/plugins/_api/toasts/components/ToastContentRenderer.tsx"() {
       "use strict";
@@ -15135,7 +15117,7 @@ ${log.errorStack}`;
       init_Discord2();
       init_useToastStore();
       import_react20 = __toESM(require_react(), 1);
-      import_react_native35 = __toESM(require_react_native(), 1);
+      import_react_native36 = __toESM(require_react_native(), 1);
       init_shallow3();
       __name(ToastIcon, "ToastIcon");
       __name(GenericToast, "GenericToast");
@@ -15145,14 +15127,14 @@ ${log.errorStack}`;
   });
 
   // src/plugins/_api/toasts/components/Toast.tsx
-  var import_react_native_reanimated2, import_react_native_gesture_handler, import_react_native36, import_react21, OFFSCREEN_LENGTH, useStyles4, _worklet_10575445024011_init_data, _worklet_13316524972762_init_data, _worklet_2394815801719_init_data, _worklet_8119029086985_init_data, _worklet_12633554293434_init_data, _worklet_7325651134036_init_data, _worklet_904652509612_init_data, _worklet_1700014798715_init_data, Toast_default;
+  var import_react_native_reanimated2, import_react_native_gesture_handler, import_react_native37, import_react21, OFFSCREEN_LENGTH, useStyles4, _worklet_10575445024011_init_data, _worklet_13316524972762_init_data, _worklet_2394815801719_init_data, _worklet_8119029086985_init_data, _worklet_12633554293434_init_data, _worklet_7325651134036_init_data, _worklet_904652509612_init_data, _worklet_1700014798715_init_data, Toast_default;
   var init_Toast = __esm({
     "src/plugins/_api/toasts/components/Toast.tsx"() {
       "use strict";
       init_jsxRuntime();
       import_react_native_reanimated2 = __toESM(require_react_native_reanimated(), 1);
       import_react_native_gesture_handler = __toESM(require_react_native_gesture_handler(), 1);
-      import_react_native36 = __toESM(require_react_native(), 1);
+      import_react_native37 = __toESM(require_react_native(), 1);
       init_styles();
       init_libraries();
       import_react21 = __toESM(require_react(), 1);
@@ -15237,7 +15219,7 @@ ${log.errorStack}`;
         var styles = useStyles4();
         var {
           width
-        } = (0, import_react_native36.useWindowDimensions)();
+        } = (0, import_react_native37.useWindowDimensions)();
         var hideToast = useToastStore((s) => s.hideToast);
         var translationX = (0, import_react_native_reanimated2.useSharedValue)(0);
         var translationY = (0, import_react_native_reanimated2.useSharedValue)(0);
@@ -15381,7 +15363,7 @@ ${log.errorStack}`;
               onPress: toast.onPress,
               children: /* @__PURE__ */ jsx(import_react_native_reanimated2.default.View, {
                 style: [animatedStyles, styles.container, toast.contentContainerStyle],
-                children: /* @__PURE__ */ jsx(import_react_native36.View, {
+                children: /* @__PURE__ */ jsx(import_react_native37.View, {
                   style: styles.contentContainer,
                   children: /* @__PURE__ */ jsx(ToastContentRenderer, {
                     toast
@@ -15400,7 +15382,7 @@ ${log.errorStack}`;
     var toasts = useToastStore((state2) => state2.toasts);
     var marginTop = useSafeAreaInsets().top + 8;
     if (isDiscordToastActive()) marginTop += 50;
-    return /* @__PURE__ */ jsx(import_react_native37.View, {
+    return /* @__PURE__ */ jsx(import_react_native38.View, {
       style: {
         marginTop,
         gap: 4
@@ -15412,12 +15394,12 @@ ${log.errorStack}`;
       }, toast.id))
     });
   }
-  var import_react_native37, isDiscordToastActive;
+  var import_react_native38, isDiscordToastActive;
   var init_ToastContainer = __esm({
     "src/plugins/_api/toasts/components/ToastContainer.tsx"() {
       "use strict";
       init_jsxRuntime();
-      import_react_native37 = __toESM(require_react_native(), 1);
+      import_react_native38 = __toESM(require_react_native(), 1);
       init_react_native_safe_area_context();
       init_useToastStore();
       init_Toast();
@@ -15487,7 +15469,7 @@ ${log.errorStack}`;
   // src/plugins/_core/error-boundary/CollapsibleHandler.tsx
   function CollapsibleHandler({ collapsed, setCollapsed, onCopy }) {
     var logoPrimary = useToken(tokens.colors.LOGO_PRIMARY);
-    return /* @__PURE__ */ jsxs(import_react_native38.View, {
+    return /* @__PURE__ */ jsxs(import_react_native39.View, {
       style: {
         gap: 8,
         flexDirection: "row",
@@ -15498,7 +15480,7 @@ ${log.errorStack}`;
         /* @__PURE__ */ jsx(Button_default, {
           variant: "secondary",
           text: collapsed ? t3.error_boundary.screen.show_more() : t3.error_boundary.screen.show_less(),
-          icon: /* @__PURE__ */ jsx(import_react_native38.Image, {
+          icon: /* @__PURE__ */ jsx(import_react_native39.Image, {
             resizeMode: "contain",
             source: findAssetId("down_arrow"),
             style: {
@@ -15516,7 +15498,7 @@ ${log.errorStack}`;
         /* @__PURE__ */ jsx(Button_default, {
           variant: "secondary",
           text: t3.error_boundary.screen.copy(),
-          icon: /* @__PURE__ */ jsx(import_react_native38.Image, {
+          icon: /* @__PURE__ */ jsx(import_react_native39.Image, {
             resizeMode: "contain",
             style: {
               tintColor: logoPrimary,
@@ -15529,7 +15511,7 @@ ${log.errorStack}`;
       ]
     });
   }
-  var import_react_native38;
+  var import_react_native39;
   var init_CollapsibleHandler = __esm({
     "src/plugins/_core/error-boundary/CollapsibleHandler.tsx"() {
       "use strict";
@@ -15538,7 +15520,7 @@ ${log.errorStack}`;
       init_i18n();
       init_assets();
       init_Discord();
-      import_react_native38 = __toESM(require_react_native(), 1);
+      import_react_native39 = __toESM(require_react_native(), 1);
       __name(CollapsibleHandler, "CollapsibleHandler");
     }
   });
@@ -15554,7 +15536,7 @@ ${log.errorStack}`;
       return null;
     }
     return /* @__PURE__ */ jsx(Card_default, {
-      children: /* @__PURE__ */ jsxs(import_react_native39.View, {
+      children: /* @__PURE__ */ jsxs(import_react_native40.View, {
         style: {
           gap: 8
         },
@@ -15563,11 +15545,11 @@ ${log.errorStack}`;
             variant: "heading-lg/bold",
             children: t3.error_boundary.screen.component_stack()
           }),
-          /* @__PURE__ */ jsx(import_react_native39.View, {
+          /* @__PURE__ */ jsx(import_react_native40.View, {
             style: {
               gap: 4
             },
-            children: stack.map((component, index) => /* @__PURE__ */ jsxs(import_react_native39.View, {
+            children: stack.map((component, index) => /* @__PURE__ */ jsxs(import_react_native40.View, {
               style: {
                 flexDirection: "row"
               },
@@ -15603,7 +15585,7 @@ ${log.errorStack}`;
       })
     });
   }
-  var import_react22, import_react_native39;
+  var import_react22, import_react_native40;
   var init_ErrorComponentStackCard = __esm({
     "src/plugins/_core/error-boundary/ErrorComponentStackCard.tsx"() {
       "use strict";
@@ -15611,7 +15593,7 @@ ${log.errorStack}`;
       init_i18n();
       init_parseComponentStack();
       import_react22 = __toESM(require_react(), 1);
-      import_react_native39 = __toESM(require_react_native(), 1);
+      import_react_native40 = __toESM(require_react_native(), 1);
       init_CollapsibleHandler();
       init_clipboard();
       init_Discord2();
@@ -15630,7 +15612,7 @@ ${log.errorStack}`;
       return null;
     }
     return /* @__PURE__ */ jsx(Card_default, {
-      children: /* @__PURE__ */ jsxs(import_react_native40.View, {
+      children: /* @__PURE__ */ jsxs(import_react_native41.View, {
         style: {
           gap: 12
         },
@@ -15639,7 +15621,7 @@ ${log.errorStack}`;
             variant: "heading-lg/bold",
             children: t3.error_boundary.screen.call_stack()
           }),
-          /* @__PURE__ */ jsx(import_react_native40.View, {
+          /* @__PURE__ */ jsx(import_react_native41.View, {
             style: {
               gap: 4
             },
@@ -15663,7 +15645,7 @@ ${log.errorStack}`;
   }
   function Line(props) {
     var [collapsed, setCollapsed] = (0, import_react23.useState)(true);
-    return /* @__PURE__ */ jsxs(import_react_native40.Pressable, {
+    return /* @__PURE__ */ jsxs(import_react_native41.Pressable, {
       onPress: /* @__PURE__ */ __name(() => setCollapsed((v) => !v), "onPress"),
       children: [
         /* @__PURE__ */ jsx(Text_default, {
@@ -15692,7 +15674,7 @@ ${log.errorStack}`;
       ]
     });
   }
-  var import_react23, import_react_native40;
+  var import_react23, import_react_native41;
   var init_ErrorStackCard = __esm({
     "src/plugins/_core/error-boundary/ErrorStackCard.tsx"() {
       "use strict";
@@ -15700,7 +15682,7 @@ ${log.errorStack}`;
       init_ErrorCard();
       init_parseErrorStack();
       import_react23 = __toESM(require_react(), 1);
-      import_react_native40 = __toESM(require_react_native(), 1);
+      import_react_native41 = __toESM(require_react_native(), 1);
       init_CollapsibleHandler();
       init_i18n();
       init_clipboard();
@@ -15719,7 +15701,7 @@ ${log.errorStack}`;
       children: /* @__PURE__ */ jsxs(SafeAreaView, {
         style: styles.container,
         children: [
-          /* @__PURE__ */ jsxs(import_react_native41.View, {
+          /* @__PURE__ */ jsxs(import_react_native42.View, {
             style: {
               gap: 4
             },
@@ -15750,7 +15732,7 @@ ${log.errorStack}`;
               })
             ]
           }),
-          /* @__PURE__ */ jsxs(import_react_native41.ScrollView, {
+          /* @__PURE__ */ jsxs(import_react_native42.ScrollView, {
             fadingEdgeLength: 64,
             contentContainerStyle: {
               gap: 12
@@ -15799,7 +15781,7 @@ ${log.errorStack}`;
       })
     });
   }
-  var import_react_native41, useStyles5;
+  var import_react_native42, useStyles5;
   var init_ErrorBoundaryScreen = __esm({
     "src/plugins/_core/error-boundary/ErrorBoundaryScreen.tsx"() {
       "use strict";
@@ -15809,7 +15791,7 @@ ${log.errorStack}`;
       init_i18n();
       init_native();
       init_isError();
-      import_react_native41 = __toESM(require_react_native(), 1);
+      import_react_native42 = __toESM(require_react_native(), 1);
       init_ErrorComponentStackCard();
       init_ErrorStackCard();
       init_info();
@@ -16421,7 +16403,6 @@ ${log.errorStack}`;
         "utils/lazy": createModuleProxy(() => (init_lazy(), __toCommonJS(lazy_exports))),
         "utils/objects": createModuleProxy(() => (init_objects(), __toCommonJS(objects_exports))),
         "utils/network/fetchAsDataUrl": createModuleProxy(() => (init_fetchAsDataUrl(), __toCommonJS(fetchAsDataUrl_exports))),
-        "utils/network/url": createModuleProxy(() => (init_url(), __toCommonJS(url_exports))),
         "utils/errors/isError": createModuleProxy(() => (init_isError(), __toCommonJS(isError_exports))),
         "utils/errors/parseComponentStack": createModuleProxy(() => (init_parseComponentStack(), __toCommonJS(parseComponentStack_exports))),
         "utils/errors/parseErrorStack": createModuleProxy(() => (init_parseErrorStack(), __toCommonJS(parseErrorStack_exports))),

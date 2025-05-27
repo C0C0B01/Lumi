@@ -12,10 +12,10 @@ import { showSheet } from "@components/utils/sheets";
 import { ClientInfoSheet } from "./ClientInfoSheet";
 import { showAlert } from "@api/alerts";
 import { BundleUpdaterModule } from "@native";
-import { openURL } from "@utils/network/url";
 import { Links } from "@data/constants";
 import { useInitConfigStore } from "@stores/useInitConfigStore";
 import { useUpdaterStore } from "@stores/useUpdaterStore";
+import { Linking } from "react-native";
 
 export default function WintryPage() {
     const navigation = NavigationNative.useNavigation();
@@ -112,14 +112,14 @@ export default function WintryPage() {
                     icon={<TableRow.Icon source={findAssetId("img_account_sync_github_light")} />}
                     arrow={true}
                     trailing={<TableRow.TrailingText text={Links.GITHUB} />}
-                    onPress={() => openURL(`https://${Links.GITHUB}`)}
+                    onPress={() => Linking.openURL(`https://${Links.GITHUB}`)}
                 />
                 <TableRow
                     label={t.settings.general.discord()}
                     icon={<TableRow.Icon source={findAssetId("Discord")} />}
                     arrow={true}
                     trailing={<TableRow.TrailingText text={Links.DISCORD} />}
-                    onPress={() => openURL(`https://${Links.DISCORD}`)}
+                    onPress={() => Linking.openURL(`https://${Links.DISCORD}`)}
                 />
             </TableRowGroup>
         </PageWrapper>
