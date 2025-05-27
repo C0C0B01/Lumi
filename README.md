@@ -3,6 +3,7 @@
 
 # **Lumi**
 A fork of Wintry
+Discord https://discord.gg/6cN7wKa8gp
 
 ## Features
 - Built-in plugins:
@@ -16,7 +17,14 @@ A fork of Wintry
 Lumi is built for and only supported on **Android*
 
 ## **Installation**
-To install Lumi, a **loader** is required to inject and provide native functionality to Lumi. Lumi **only** supports loading from [**LumiXposed**](https://github.com/C0C0B01/LumiXposed) or [**WintryXposed**](https://github.com/wtcord/xposed).
+
+- **Root** with Xposed - [LumiXposed](https://github.com/C0C0B01/LumiXposed/releases/latest)
+- **Non-root** - [LumiManager](https://github.com/C0C0B01/LumiManager/releases/latest)
+
+## Support Me
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/cocobo1)
+
+Please do not donate if you are not able to, if you are able to please don't donate much :)
 
 ## Contributing
 We welcome contributions from the community! Whether you're fixing bugs, adding new features, or improving documentation, your help is greatly appreciated. Please make sure to review our [contributing guidelines](./CONTRIBUTING.md) before getting started.
