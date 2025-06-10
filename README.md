@@ -15,7 +15,7 @@ Discord: https://discord.gg/6cN7wKa8gp
 	- ...many more coming down the road!
 
 ## **Platform Support**
-Lumi is built for and only supported on **Android*
+Lumi is built for and only supported on *Android*
 
 ## **Installation**
 
