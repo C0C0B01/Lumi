@@ -151,6 +151,24 @@ export default definePlugin({
                             getComponent: () => lazy(() => import("@components/Wintry/Settings/pages/Plugins")),
                         },
                     }),
+                    //                    registerSettingRenderer("LUMI_THEMES", {
+                    //                        type: "route",
+                    //                        title: () => t.settings.sections.themes(),
+                    //                        IconComponent: PuzzlePieceIcon,
+                    //                        screen: {
+                    //                            route: "LUMI_THEMES",
+                    //                            getComponent: () => lazy(() => import("@components/Wintry/Settings/pages/Themes")),
+                    //                        },
+                    //                    }),
+                    //registerSettingRenderer("LUMI_FONTS", {
+                    //    type: "route",
+                    //    title: () => t.settings.sections.fonts(),
+                    //    IconComponent: PuzzlePieceIcon,
+                    //    screen: {
+                    //        route: "LUMI_FONTS",
+                    //        getComponent: () => lazy(() => import("@components/Wintry/Settings/pages/Fonts")),
+                    //    },
+                    //}),
                     registerSettingRenderer("LUMI_DEVELOPER", {
                         type: "route",
                         title: () => t.settings.sections.developer(),

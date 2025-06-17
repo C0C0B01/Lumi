@@ -138,6 +138,10 @@ type RootTranslation = {
 			 */
 			themes: string
 			/**
+			 * T​h​e​m​e​s
+			 */
+			fonts: string
+			/**
 			 * D​e​v​e​l​o​p​e​r
 			 */
 			developer: string

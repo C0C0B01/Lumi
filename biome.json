@@ -7,8 +7,20 @@
 	},
 	"files": {
 		"ignoreUnknown": true,
-		"include": ["*.js", "*.ts", "*.json", "*.tsx", "*.jsx", "*.mjs", "*.mts"],
-		"ignore": ["dist/*", "node_modules/*", "src/i18n/*"]
+		"include": [
+			"*.js",
+			"*.ts",
+			"*.json",
+			"*.tsx",
+			"*.jsx",
+			"*.mjs",
+			"*.mts"
+		],
+		"ignore": [
+			"dist/*",
+			"node_modules/*",
+			"src/i18n/*"
+		]
 	},
 	"formatter": {
 		"enabled": true,
@@ -40,6 +52,9 @@
 					"level": "off"
 				}
 			},
+			"complexity": {
+				"noForEach": "off"
+			},
 			"suspicious": {
 				"noAssignInExpressions": {
 					"level": "off"
@@ -66,16 +81,12 @@
 	"javascript": {
 		"formatter": {
 			"enabled": true,
-
 			"indentWidth": 4,
 			"lineWidth": 120,
-
 			"lineEnding": "crlf",
 			"arrowParentheses": "asNeeded",
-
 			"indentStyle": "space",
 			"quoteStyle": "double",
-
 			"semicolons": "always",
 			"trailingCommas": "all"
 		}
