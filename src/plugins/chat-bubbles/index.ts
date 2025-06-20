@@ -1,5 +1,5 @@
 import { definePlugin, definePluginSettings, logger } from "#plugin-context";
-import { Devs } from "@data/constants";
+import { Dev } from "@data/constants";
 import BubbleModule from "@loader/modules/BubbleModule";
 import { byProps } from "@metro/common/filters";
 import { tokens } from "@metro/common/libraries";
@@ -32,7 +32,7 @@ const settings = definePluginSettings({
 export default definePlugin({
     name: "ChatBubbles",
     description: "Adds customizable chat bubbles to the chat, similar to Flowercord.",
-    authors: [Devs.Pylix],
+    authors: [Dev.Pylix],
 
     start() {
         BubbleModule.hookBubbles();

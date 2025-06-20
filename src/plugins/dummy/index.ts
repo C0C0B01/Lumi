@@ -1,5 +1,5 @@
 import { definePlugin, definePluginSettings } from "#plugin-context";
-import { Devs } from "@data/constants";
+import { Dev } from "@data/constants";
 import { byProps } from "@metro/common/filters";
 
 const settings = definePluginSettings({
@@ -80,7 +80,7 @@ if (__DEV__) {
 export default definePlugin({
     name: "Dummy",
     description: "Does literally nothing! Used for showcasing plugin APIs.",
-    authors: [Devs.Pylix],
+    authors: [Dev.Pylix],
 
     isAvailable: () => __DEV__,
 

@@ -1,5 +1,5 @@
 import { definePlugin } from "#plugin-context";
-import { Devs } from "@data/constants";
+import { Dev } from "@data/constants";
 import { byFilePath } from "@metro/common/filters";
 import ToastContainer from "./components/ToastContainer";
 import { useToastStore } from "@stores/useToastStore";
@@ -7,7 +7,7 @@ import { useToastStore } from "@stores/useToastStore";
 export default definePlugin({
     name: "Toasts",
     description: "Provides a toast notification API.",
-    authors: [Devs.Pylix],
+    authors: [Dev.Pylix],
     required: true,
 
     patches: [

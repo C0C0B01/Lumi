@@ -1,5 +1,5 @@
 import { definePlugin, logger, patcher } from "#plugin-context";
-import { Devs } from "@data/constants";
+import { Dev } from "@data/constants";
 import { lookup } from "@metro";
 import { lookupByName, lookupByProps } from "@metro/common/wrappers";
 import { SingleMetroModule } from "@metro/module";
@@ -9,7 +9,7 @@ import { establishWebSocketConnection } from "./repl-client";
 export default definePlugin({
     name: "DevToolkit",
     description: "A toolkit for developers to ease the development process.",
-    authors: [Devs.Pylix],
+    authors: [Dev.Pylix],
     version: "1.0.0",
     start() {
         Object.defineProperty(SingleMetroModule.prototype, "l", {
@@ -47,5 +47,5 @@ export default definePlugin({
 
         establishWebSocketConnection();
     },
-    stop() {},
+    stop() { },
 });

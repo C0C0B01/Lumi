@@ -21,7 +21,7 @@ export interface AddonCollectionManager<T extends Addon, SK extends string = str
 }
 
 export type AddonCollectionManagerBuilderProps<T extends Addon, SK extends string, FK extends string> = {
-    data: T[];
+    data: () => T[];
     defaultSortOption: SK;
     defaultFilterOptions: FK[];
     sortOptions: SortOption<T, SK>[];
@@ -38,9 +38,13 @@ export function createAddonCollectionManager<T extends Addon, SK extends string,
     ...props
 }: AddonCollectionManagerBuilderProps<T, SK, FK>): AddonCollectionManager<T, SK, FK> {
     const searchTerms: ((a: T) => string)[] = [
-        v => v.name,
-        v => v.description,
-        v => v.authors.map(a => a.name).join(", "),
+        v => v.asAddonMetadata().name,
+        v => v.asAddonMetadata().description,
+        v =>
+            v
+                .asAddonMetadata()
+                .authors.map(a => a.name)
+                .join(", "),
         ...(props.searchTerms ?? []),
     ];
 
@@ -66,7 +70,7 @@ export function createAddonCollectionManager<T extends Addon, SK extends string,
         useFilterResults: () => {
             const { currentSortOption, currentFilterOptions, currentQuery } = useStore();
 
-            let addons = data;
+            let addons = data();
             for (const option of currentFilterOptions) {
                 const filterFn = filterOptions.find(o => o.key === option)?.filterFn;
                 if (filterFn) {

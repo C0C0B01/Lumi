@@ -1,5 +1,5 @@
 import { definePlugin, logger, patcher } from "#plugin-context";
-import { Devs } from "@data/constants";
+import { Dev } from "@data/constants";
 import { byName } from "@metro/common/filters";
 import { ErrorBoundaryScreen } from "./ErrorBoundaryScreen";
 import { lookupByProps } from "@metro/common/wrappers";
@@ -7,7 +7,7 @@ import { lookupByProps } from "@metro/common/wrappers";
 export default definePlugin({
     name: "ErrorBoundary",
     description: "Error boundary for React components",
-    authors: [Devs.Pylix],
+    authors: [Dev.Pylix],
     required: true,
 
     patches: [

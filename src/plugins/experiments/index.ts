@@ -1,4 +1,4 @@
-import { Devs } from "@data/constants";
+import { Dev } from "@data/constants";
 import { waitFor } from "@metro/internal/modules";
 import { definePlugin, patcher } from "#plugin-context";
 import { UserStore, byStoreName } from "@metro/common/stores";
@@ -7,7 +7,7 @@ import { byProps } from "@metro/common/filters";
 // Reinitialize DeveloperExperimentStore to apply the patches
 function reinitStore() {
     waitFor(byStoreName("DeveloperExperimentStore", { checkEsmDefault: true }), DeveloperExperimentStore => {
-        const unpatch = patcher.detached.instead(Object, "defineProperties", () => {});
+        const unpatch = patcher.detached.instead(Object, "defineProperties", () => { });
         DeveloperExperimentStore.initialize();
         unpatch();
     });
@@ -17,7 +17,7 @@ function reinitStore() {
 export default definePlugin({
     name: "Experiments",
     description: "Exposes internal developer sections, allowing you to override Discord experiments.",
-    authors: [Devs.Pylix],
+    authors: [Dev.Pylix],
 
     patches: [
         {

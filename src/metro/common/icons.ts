@@ -15,3 +15,4 @@ export const PuzzlePieceIcon = getIcon("PuzzlePieceIcon");
 export const CircleInformationIcon = getIcon("CircleInformationIcon");
 export const CircleCheckIcon = getIcon("CircleCheckIcon");
 export const WarningIcon = getIcon("WarningIcon");
+export const PaintPaletteIcon = getIcon("PaintPaletteIcon");
