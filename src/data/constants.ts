@@ -3,12 +3,12 @@ export interface Dev {
     id: bigint;
 }
 
-export const Devs = {
+export const Dev = {
     Pylix: {
         name: "pylix",
         id: 492949202121261067n,
     },
-    C0C0B01: {
+    Cocobo1: {
         name: "cocobo1",
         id: 767650984175992833n,
     },
