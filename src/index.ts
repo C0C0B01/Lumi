@@ -3,6 +3,7 @@ import reportErrorOnInitialization from "./error-reporter";
 import { wintryGlobalObject } from "./globals";
 import { initializeMetro } from "./metro/internal";
 import { initializePlugins } from "./stores/usePluginStore";
+import { useThemeStore } from "./plugins/_core/painter/useThemeStore";
 import { initCheckForUpdates } from "@stores/useUpdaterStore";
 
 Object.freeze = Object.seal = Object;

@@ -1,5 +1,5 @@
 import type { AddonMetadata } from "@components/Wintry/Settings/pages/Addon";
-import type { WintryTheme } from "./types";
+import type { WintryTheme } from "../types";
 
 export const MOCHA_THEME: WintryTheme = {
     id: "chadpuccin.mocha",

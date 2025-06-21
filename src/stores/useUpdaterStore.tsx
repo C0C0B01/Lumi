@@ -116,7 +116,7 @@ export function showUpdateAvailableAlert(updateInfo: UpdateInfo) {
             {
                 text: t.actions.nevermind(),
                 variant: "secondary",
-                onPress: () => {},
+                onPress: () => { },
             },
         ],
     });

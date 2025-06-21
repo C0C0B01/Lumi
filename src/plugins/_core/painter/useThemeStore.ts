@@ -2,12 +2,17 @@ import { create } from "zustand";
 import type { WintryTheme } from "./types";
 import { parseColorManifest } from "./parser";
 import { wtlogger } from "@api/logger";
-import { MOCHA_THEME } from "./example_theme";
 import { lookupByProps } from "@metro/common/wrappers";
 import { createJSONStorage, persist } from "zustand/middleware";
 import { kvStorage } from "@loader/kvStorage";
 import { memoize } from "es-toolkit";
-import { ROSIE_PINK_THEME } from "./example_theme_1";
+import { MOCHA_THEME } from "./themes/Chadpuccin Mocha";
+import { ROSIE_PINK_THEME } from "./themes/Rosie Pink";
+import { EYE_CANDY_THEME } from "./themes/Eye Candy";
+import { DEBUG_THEME } from "./themes/Debug Theme";
+
+const Themes = [MOCHA_THEME, ROSIE_PINK_THEME, EYE_CANDY_THEME]
+// const Themes = [DEBUG_THEME]
 
 const logger = wtlogger.createChild("useThemeStore");
 const formDividerModule = lookupByProps("DIVIDER_COLORS");
@@ -83,14 +88,12 @@ export const useThemeStore = create(
         (set, get) => ({
             appliedTheme: null,
             currentRef: null,
-            themes: [MOCHA_THEME, ROSIE_PINK_THEME],
+            themes: Themes,
             setThemeRef: (id: string | null) => {
                 set({ appliedTheme: null, currentRef: null });
-
                 if (id != null) {
                     const theme = get().themes.find(t => t.id === id);
                     if (!theme) throw new Error(`Theme is not installed: ${id}`);
-
                     set({
                         appliedTheme: id,
                         currentRef: {
@@ -107,7 +110,9 @@ export const useThemeStore = create(
             storage: createJSONStorage(() => kvStorage),
             onRehydrateStorage() {
                 return state => {
-                    if (state && state.themes.length !== 0) {
+                    if (state) {
+                        state.themes = Themes;
+
                         for (const theme of state.themes) {
                             theme.asAddonMetadata = memoize(() => ({
                                 id: theme.id,

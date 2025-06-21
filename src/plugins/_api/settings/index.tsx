@@ -100,12 +100,12 @@ export default definePlugin({
         setImmediate(() => {
             // Hack that allows pushing custom pages without having to register the setting renderer
             // by passing the component through the route params
-            registerSettingRenderer("WINTRY_CUSTOM_PAGE", {
+            registerSettingRenderer("LUMI_CUSTOM_PAGE", {
                 type: "route",
                 title: () => "",
                 unsearchable: true,
                 screen: {
-                    route: "WINTRY_CUSTOM_PAGE",
+                    route: "LUMI_CUSTOM_PAGE",
                     getComponent: memoize(() =>
                         memo(() => {
                             const navigation = NavigationNative.useNavigation();
@@ -126,7 +126,7 @@ export default definePlugin({
             registerSettingSection({
                 label: t.wintry(),
                 settings: [
-                    registerSettingRenderer("WINTRY", {
+                    registerSettingRenderer("LUMI", {
                         type: "route",
                         title: () => t.wintry(),
                         IconComponent: () => <TableRow.Icon source={require("@assets/ic_lumi.png")} />,
@@ -138,46 +138,37 @@ export default definePlugin({
                             return `${version}-${shortRevision} (${branch})`;
                         },
                         screen: {
-                            route: "WINTRY",
+                            route: "LUMI",
                             getComponent: () => lazy(() => import("@components/Wintry/Settings/pages/Wintry")),
                         },
                     }),
-                    registerSettingRenderer("WINTRY_PLUGINS", {
+                    registerSettingRenderer("LUMI_PLUGINS", {
                         type: "route",
                         title: () => t.settings.sections.plugins(),
                         IconComponent: PuzzlePieceIcon,
                         screen: {
-                            route: "WINTRY_PLUGINS",
+                            route: "LUMI_PLUGINS",
                             getComponent: () => lazy(() => import("@components/Wintry/Settings/pages/Plugins")),
                         },
                     }),
-                    registerSettingRenderer("WINTRY_THEMES", {
+                    registerSettingRenderer("LUMI_THEMES", {
                         type: "route",
                         title: () => t.settings.sections.themes(),
                         IconComponent: PaintPaletteIcon,
                         screen: {
-                            route: "WINTRY_THEMES",
+                            route: "LUMI_THEMES",
                             getComponent: () => lazy(() => import("@components/Wintry/Settings/pages/Themes")),
                         },
                     }),
-                    registerSettingRenderer("WINTRY_DEVELOPER", {
+                    registerSettingRenderer("LUMI_DEVELOPER", {
                         type: "route",
                         title: () => t.settings.sections.developer(),
                         IconComponent: WrenchIcon,
                         screen: {
-                            route: "WINTRY_DEVELOPER",
+                            route: "LUMI_DEVELOPER",
                             getComponent: () => lazy(() => import("@components/Wintry/Settings/pages/Developer")),
                         },
                     }),
-                    // registerSettingRenderer("WINTRY_UPDATER", {
-                    //     type: "route",
-                    //     title: () => t.settings.sections.updater(),
-                    //     IconComponent: DownloadIcon,
-                    //     screen: {
-                    //         route: "WINTRY_UPDATER",
-                    //         getComponent: () => lazy(() => import("@components/WintrySettings/pages/Updater")),
-                    //     },
-                    // }),
                 ],
             });
         });
