@@ -6,12 +6,13 @@ import { lookupByProps } from "@metro/common/wrappers";
 import { createJSONStorage, persist } from "zustand/middleware";
 import { kvStorage } from "@loader/kvStorage";
 import { memoize } from "es-toolkit";
+import { DEBUG_THEME } from "./themes/Debug Theme";
 import { MOCHA_THEME } from "./themes/Chadpuccin Mocha";
 import { ROSIE_PINK_THEME } from "./themes/Rosie Pink";
 import { EYE_CANDY_THEME } from "./themes/Eye Candy";
-import { DEBUG_THEME } from "./themes/Debug Theme";
+import { CLEAR_VISION_THEME } from "./themes/Clear Vision";
 
-const Themes = [MOCHA_THEME, ROSIE_PINK_THEME, EYE_CANDY_THEME]
+const Themes = [MOCHA_THEME, ROSIE_PINK_THEME, EYE_CANDY_THEME, CLEAR_VISION_THEME]
 // const Themes = [DEBUG_THEME]
 
 const logger = wtlogger.createChild("useThemeStore");
@@ -47,7 +48,6 @@ export function applyTheme(id: string | null, update: boolean) {
     const ref = getCurrentRef();
 
     if (id && ref) {
-        // "Register" our theme
         formDividerModule.wait(exp => {
             exp.DIVIDER_COLORS[ref.key] = exp.DIVIDER_COLORS[ref.color.reference];
         });
