@@ -66,14 +66,14 @@ export default function PluginSheetComponent({ plugin }: PluginSheetComponentPro
                             variant="secondary"
                             disabled={true} // Disabled until the plugin info page is implemented (if ever)
                             icon={findAssetId("img_account_sync_github_white")}
-                            onPress={() => {}}
+                            onPress={() => { }}
                         />
                         <SheetAwareIconButton
                             label={t.settings.plugins.info_sheet.more_info()}
                             variant="secondary"
                             disabled={true}
                             icon={findAssetId("LinkExternalSmallIcon")}
-                            onPress={() => {}}
+                            onPress={() => { }}
                         />
                     </View>
                 )}

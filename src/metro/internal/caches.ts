@@ -55,7 +55,7 @@ function setupMetroCache() {
         serialized = {
             v: {
                 cache: CACHE_VERSION,
-                bundle: NativeClientInfoModule.Build as number,
+                bundle: NativeClientInfoModule.getConstants().Build as number,
             },
             moduleFlags: {},
             lookupIndex: {},

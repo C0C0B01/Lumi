@@ -12,6 +12,7 @@ import { openEmojiActionSheet } from "./utils/openEmojiActionSheet";
 import PressableScale from "@components/Discord/experimental/PressableScale";
 import { showToast } from "@api/toasts";
 import { byFilePath } from "@metro/common/filters";
+import { byProps } from "@metro/common/filters";
 
 function addStealButton(emojiNode: EmojiNode, element: any) {
     const insertAtIndex = (container: unknown[], index: number, paddingTop: number) => {
@@ -63,7 +64,7 @@ function makeEmojiIconPressable(emojiNode: EmojiNode, element: any) {
 export default definePlugin({
     name: "ExpressionUtils",
     description: "Adds more emotes and stickers utilities such as cloning or copying links.",
-    authors: [Dev.Pylix],
+    authors: [Dev.Pylix, Dev.cocobo1],
 
     patches: [
         {
@@ -111,6 +112,20 @@ export default definePlugin({
                 });
             },
         },
+        //{
+        //    id: "canUseEmojisEverywhere",
+        //    target: byProps(["canUseEmojisEverywhere"]),
+        //    patch(module, patcher) {
+        //        patcher.instead(module, "canUseEmojisEverywhere", () => true);
+        //    },
+        //},
+        //{
+        //    id: "canUseAnimatedEmojis",
+        //    target: byProps(["canUseAnimatedEmojis"]),
+        //    patch(module, patcher) {
+        //        patcher.instead(module, "canUseAnimatedEmojis", () => true);
+        //    },
+        //},
     ],
 
     start() {
