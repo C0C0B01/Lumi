@@ -8,7 +8,7 @@ import { patchSelectivelySyncedUserSettingsStore } from "./patches/stores";
 export default definePlugin({
     name: "Painter",
     description: "Provides themes functionalities within Wintry",
-    authors: [Dev.Pylix],
+    authors: [Dev.Pylix, Dev.cocobo1],
     required: true,
     start() {
         waitFor(byProps(["SemanticColor"]), () => {
