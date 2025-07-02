@@ -1,3 +1,5 @@
+import type { DiscordNativeModules } from "./types";
+
 export function getNativeModule<T = any>(...names: string[]): T {
     const moduleProxy = window.nativeModuleProxy;
     const module = names.find(name => moduleProxy[name] !== null)!;
@@ -5,9 +7,32 @@ export function getNativeModule<T = any>(...names: string[]): T {
 }
 
 // Names are based on 259204 (Android), this is probably not the same on iOS
-export const NativeCacheModule = getNativeModule("NativeCacheModule");
-export const NativeFileModule = getNativeModule("NativeFileModule");
-export const NativeClientInfoModule = getNativeModule("NativeClientInfoModule");
-export const NativeDeviceModule = getNativeModule("NativeDeviceModule");
+//export const NativeCacheModule = getNativeModule("NativeCacheModule");
+//export const NativeFileModule = getNativeModule("NativeFileModule");
+//export const NativeClientInfoModule = getNativeModule("NativeClientInfoModule");
+//export const NativeDeviceModule = getNativeModule("NativeDeviceModule");
+//export const BundleUpdaterModule = getNativeModule("BundleUpdaterManager");
+//export const ThemeModule = getNativeModule("NativeThemeModule");
+
+// Names are based on 259204 (Android), this is probably not the same on iOS
+export const NativeCacheModule = __turboModuleProxy(
+    'NativeCacheModule',
+) as DiscordNativeModules.CacheModule
+
+export const NativeFileModule = __turboModuleProxy(
+    'NativeFileModule',
+) as DiscordNativeModules.FileModule
+
+export const NativeClientInfoModule = __turboModuleProxy(
+    'NativeClientInfoModule',
+) as DiscordNativeModules.ClientInfoModule
+
+export const NativeDeviceModule = __turboModuleProxy(
+    'NativeClientInfoModule',
+) as DiscordNativeModules.ClientInfoModule
+
 export const BundleUpdaterModule = getNativeModule("BundleUpdaterManager");
-export const ThemeModule = getNativeModule("NativeThemeModule");
+
+export const NativeThemeModule = __turboModuleProxy(
+    'NativeThemeModule',
+) as DiscordNativeModules.ThemeModule

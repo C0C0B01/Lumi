@@ -46,7 +46,7 @@ function setupMetroCache() {
 
     try {
         serialized = JSON.parse(kvStorage.getItem(WINTRY_METRO_CACHE_KEY)!);
-        if (serialized.v.cache !== CACHE_VERSION || serialized.v.bundle !== NativeClientInfoModule.Build) {
+        if (serialized.v.cache !== CACHE_VERSION || serialized.v.bundle !== NativeClientInfoModule.getConstants().Build) {
             throw "Cache version mismatch";
         }
     } catch (error) {
@@ -55,7 +55,7 @@ function setupMetroCache() {
         serialized = {
             v: {
                 cache: CACHE_VERSION,
-                bundle: NativeClientInfoModule.getConstants().Build as number,
+                bundle: NativeClientInfoModule.getConstants().Build as any,
             },
             moduleFlags: {},
             lookupIndex: {},
@@ -86,7 +86,7 @@ function setupMetroCache() {
                 JSON.stringify({
                     v: {
                         cache: CACHE_VERSION,
-                        bundle: NativeClientInfoModule.Build as number,
+                        bundle: NativeClientInfoModule.getConstants().Build as any,
                     },
                     moduleFlags: Object.fromEntries(cache.moduleFlags),
                     lookupIndex: Object.fromEntries(
