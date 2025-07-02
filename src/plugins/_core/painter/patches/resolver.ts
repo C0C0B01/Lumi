@@ -5,6 +5,7 @@ import { getCurrentRef } from "../useThemeStore";
 import { getNativeModule } from "@native";
 import { patcher } from "#plugin-context";
 import { chroma } from "@metro/common/libraries";
+import { NativeThemeModule } from "src/native/index.ts";
 
 const tokensModule = lookupByProps("SemanticColor").asLazy();
 const isThemeModule = lookup(byWriteableProp("isThemeDark")).asLazy();
@@ -26,7 +27,7 @@ export default function patchDefinitionAndResolver() {
 
     patcher.before(isThemeModule, "isThemeDark", callback);
     patcher.before(isThemeModule, "isThemeLight", callback);
-    patcher.before(getNativeModule("NativeThemeModule"), "updateTheme", callback);
+    //    patcher.before(NativeThemeModule, "updateTheme", callback);
 
     patcher.instead(tokensModule.default.internal, "resolveSemanticColor", (args: any[], orig: any) => {
         const _colorRef = getCurrentRef();
