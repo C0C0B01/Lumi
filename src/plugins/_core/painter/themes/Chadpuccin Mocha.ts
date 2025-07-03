@@ -9,7 +9,7 @@ export const MOCHA_THEME: WintryTheme = {
         description: "A (spec v3) warmer, more wholesome (unofficial!) catppuccin flavor",
         authors: [
             {
-                name: "Moodzz",
+                name: "Mud'rhiod",
                 id: "807170846497570848",
             },
         ],

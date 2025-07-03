@@ -9,7 +9,7 @@ export const EYE_CANDY_THEME: WintryTheme = {
         description: "Lumi port of Hanibee's Eye Candy theme",
         authors: [
             {
-                name: "Mudaranrhiod",
+                name: "Mud'rhiod",
                 id: "807170846497570848",
             },
         ],
@@ -63,6 +63,7 @@ export const EYE_CANDY_THEME: WintryTheme = {
                 CARD_SECONDARY_BG: { value: "#474453" },
                 CHANNEL_ICON: { value: "#BDBECC" },
                 CHANNELS_DEFAULT: { value: "#E8E8EA" },
+                CONTROL_BRAND_FOREGROUND: { value: "#DFBE80" },
                 EMBED_BACKGROUND: { value: "#3F3E4A" },
                 HEADER_PRIMARY: { value: "#FFF" },
                 HEADER_SECONDARY: { value: "#BDBECC" },
@@ -78,7 +79,7 @@ export const EYE_CANDY_THEME: WintryTheme = {
                     value: "#DFBE80",
                     opacity: 0.30,
                 },
-                MENTION_FOREGROUND: { value: "#89b4fa" },
+                MENTION_FOREGROUND: { value: "#DFBE80" },
                 POLLS_VICTOR_FILL: {
                     value: "#D1B681",
                     opacity: 0.20,
@@ -102,6 +103,7 @@ export const EYE_CANDY_THEME: WintryTheme = {
                 STATUS_DANGER: { value: "#C4967A" },
                 STATUS_POSITIVE: { value: "#D1B681" },
                 TEXT_DANGER: { value: "#C4967A" },
+                TEXT_BRAND: { value: "#FFCA92" },
                 TEXT_LINK: { value: "#FFE1C1" },
                 TEXT_MUTED: { value: "#CEB0CD" },
                 TEXT_NORMAL: { value: "#E8E8EA" },
@@ -235,7 +237,6 @@ export const EYE_CANDY_THEME: WintryTheme = {
                 YELLOW_830: "#D0B278",
                 YELLOW_860: "#D0B278",
                 YELLOW_900: "#D0B278"
-
             },
         },
     },
