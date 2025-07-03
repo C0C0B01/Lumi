@@ -28,9 +28,9 @@ class SwcTransformer implements FileTransformer {
                 // Why? Because some libraries use .js extension for ts/tsx/jsx files
                 parser: args.path.includes("node_modules")
                     ? {
-                          syntax: "typescript",
-                          tsx: true,
-                      }
+                        syntax: "typescript",
+                        tsx: true,
+                    }
                     : undefined,
                 transform: {
                     react: {
@@ -126,7 +126,7 @@ class ReanimatedTransformer implements FileTransformer {
                 supportsStaticESM: true,
             },
             plugins: [
-                "react-native-reanimated/plugin",
+                "react-native-worklets/plugin",
                 // Required because Reanimated plugin adds const and let
                 "@babel/plugin-transform-block-scoping",
             ],
