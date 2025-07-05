@@ -98,7 +98,7 @@ export function getPatchFunc<T extends PatchType>(patchType: T) {
         callback: CallbackTypes<P[N]>[T],
         oneTime = false,
     ) => {
-        if (_patcherDelaySymbol in funcParent && typeof funcParent[_patcherDelaySymbol] === "function") {
+        if (_patcherDelaySymbol in funcParent) {
             const delayCallback: DelayCallback = funcParent[_patcherDelaySymbol];
 
             let cancel = false;

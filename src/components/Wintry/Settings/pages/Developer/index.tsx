@@ -1,3 +1,4 @@
+import { lazy } from "react";
 import { t } from "@i18n";
 import { findAssetId } from "@api/assets";
 import { TableRow, TableRowGroup, TableSwitchRow, Text, TextInput } from "@components/Discord";
@@ -63,7 +64,7 @@ export default function DeveloperPage() {
                     onPress={() =>
                         navigation.push("LUMI_CUSTOM_PAGE", {
                             title: tSections.tools.asset_browser.label(),
-                            render: require("./AssetBrowser").default,
+                            render: lazy(() => import("./AssetBrowser")),
                         })
                     }
                 />
@@ -74,7 +75,7 @@ export default function DeveloperPage() {
                     onPress={() =>
                         navigation.push("LUMI_CUSTOM_PAGE", {
                             title: "Token Browser",
-                            render: require("./TokenBrowser").default,
+                            render: lazy(() => import("./TokenBrowser")),
                         })
                     }
                 />
@@ -87,7 +88,7 @@ export default function DeveloperPage() {
                     onPress={() =>
                         navigation.push("LUMI_CUSTOM_PAGE", {
                             title: "Toast Playground",
-                            render: require("./ToastPlayground").default,
+                            render: lazy(() => import("./ToastPlayground")),
                         })
                     }
                 />
@@ -98,7 +99,7 @@ export default function DeveloperPage() {
                     onPress={() =>
                         navigation.push("LUMI_CUSTOM_PAGE", {
                             title: "Callouts Playground",
-                            render: require("./CalloutPlayground").default,
+                            render: lazy(() => import("./CalloutPlayground")),
                         })
                     }
                 />
@@ -109,7 +110,7 @@ export default function DeveloperPage() {
                     onPress={() =>
                         navigation.push("LUMI_CUSTOM_PAGE", {
                             title: "Alerts Playground",
-                            render: require("./AlertsPlayground").default,
+                            render: lazy(() => import("./AlertsPlayground")),
                         })
                     }
                 />

@@ -6,6 +6,7 @@ import { TableRow, TableRowGroup, TableSwitchRow } from "@components/Discord";
 import { View } from "react-native";
 import { delay } from "es-toolkit";
 import { NavigationNative } from "@metro/common/libraries";
+import { lazy } from "react";
 import { InfoCard } from "./InfoCard";
 import { showSheet } from "@components/utils/sheets";
 import { ClientInfoSheet } from "./ClientInfoSheet";
@@ -35,7 +36,7 @@ export default function WintryPage() {
                         onPress={() => {
                             navigation.push("LUMI_CUSTOM_PAGE", {
                                 title: t.wintry(),
-                                render: require("../Updater").default,
+                                render: lazy(() => import("../Updater")),
                             });
                         }}
                     />
@@ -55,7 +56,7 @@ export default function WintryPage() {
                     onPress={() =>
                         navigation.push("LUMI_CUSTOM_PAGE", {
                             title: t.settings.general.logs(),
-                            render: require("../Updater").default,
+                            render: lazy(() => import("../Logs")),
                         })
                     }
                     icon={<TableRow.Icon source={findAssetId("PaperIcon")} />}
