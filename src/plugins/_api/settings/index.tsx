@@ -18,6 +18,7 @@ import { useUpdaterStore } from "@stores/useUpdaterStore";
 import { findInReactTree } from "@utils/objects";
 import { memoize } from "es-toolkit";
 import { lazy, memo, useLayoutEffect } from "react";
+import { Text, View } from "react-native";
 
 const settings = definePluginSettings({
     onTop: {
@@ -31,7 +32,7 @@ const settings = definePluginSettings({
 export default definePlugin({
     name: "Settings",
     description: "Provides a settings interface and debug information",
-    authors: [Dev.Pylix],
+    authors: [Dev.Pylix, Dev.cocobo1],
     required: true,
 
     patches: [
@@ -139,7 +140,10 @@ export default definePlugin({
                         },
                         screen: {
                             route: "LUMI",
-                            getComponent: () => lazy(() => import("@components/Wintry/Settings/pages/Wintry")),
+                            getComponent: () => memo(() => {
+                                const WintryPage = require("@components/Wintry/Settings/pages/Wintry").default;
+                                return <WintryPage />;
+                            }),
                         },
                     }),
                     registerSettingRenderer("LUMI_PLUGINS", {
@@ -148,7 +152,10 @@ export default definePlugin({
                         IconComponent: PuzzlePieceIcon,
                         screen: {
                             route: "LUMI_PLUGINS",
-                            getComponent: () => lazy(() => import("@components/Wintry/Settings/pages/Plugins")),
+                            getComponent: () => memo(() => {
+                                const WintryPage = require("@components/Wintry/Settings/pages/Plugins").default;
+                                return <WintryPage />;
+                            }),
                         },
                     }),
                     registerSettingRenderer("LUMI_THEMES", {
@@ -157,7 +164,10 @@ export default definePlugin({
                         IconComponent: PaintPaletteIcon,
                         screen: {
                             route: "LUMI_THEMES",
-                            getComponent: () => lazy(() => import("@components/Wintry/Settings/pages/Themes")),
+                            getComponent: () => memo(() => {
+                                const WintryPage = require("@components/Wintry/Settings/pages/Themes").default;
+                                return <WintryPage />;
+                            }),
                         },
                     }),
                     registerSettingRenderer("LUMI_DEVELOPER", {
@@ -166,7 +176,10 @@ export default definePlugin({
                         IconComponent: WrenchIcon,
                         screen: {
                             route: "LUMI_DEVELOPER",
-                            getComponent: () => lazy(() => import("@components/Wintry/Settings/pages/Developer")),
+                            getComponent: () => memo(() => {
+                                const WintryPage = require("@components/Wintry/Settings/pages/Developer").default;
+                                return <WintryPage />;
+                            }),
                         },
                     }),
                 ],
