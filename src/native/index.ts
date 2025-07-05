@@ -1,9 +1,13 @@
 import type { DiscordNativeModules } from "./types";
 
 export function getNativeModule<T = any>(...names: string[]): T {
-    const moduleProxy = window.nativeModuleProxy;
-    const module = names.find(name => moduleProxy[name] !== null)!;
-    return moduleProxy[module];
+    for (const name of names) {
+        const module = global.__turboModuleProxy(name);
+        if (module) return module as T;
+        const legacyModule = global.nativeModuleProxy?.[name];
+        if (legacyModule) return legacyModule as T;
+    }
+    throw new Error(`Native module "${names.join(", ")}" not found.`);
 }
 
 // Names are based on 259204 (Android), this is probably not the same on iOS
