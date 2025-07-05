@@ -17,8 +17,7 @@ import { NavigationNative } from "@metro/common/libraries";
 import { useUpdaterStore } from "@stores/useUpdaterStore";
 import { findInReactTree } from "@utils/objects";
 import { memoize } from "es-toolkit";
-import { lazy, memo, useLayoutEffect } from "react";
-import { Text, View } from "react-native";
+import { memo, useLayoutEffect } from "react";
 
 const settings = definePluginSettings({
     onTop: {
@@ -140,10 +139,7 @@ export default definePlugin({
                         },
                         screen: {
                             route: "LUMI",
-                            getComponent: () => memo(() => {
-                                const WintryPage = require("@components/Wintry/Settings/pages/Wintry").default;
-                                return <WintryPage />;
-                            }),
+                            getComponent: () => require("@components/Wintry/Settings/pages/Wintry").default
                         },
                     }),
                     registerSettingRenderer("LUMI_PLUGINS", {
@@ -152,10 +148,7 @@ export default definePlugin({
                         IconComponent: PuzzlePieceIcon,
                         screen: {
                             route: "LUMI_PLUGINS",
-                            getComponent: () => memo(() => {
-                                const WintryPage = require("@components/Wintry/Settings/pages/Plugins").default;
-                                return <WintryPage />;
-                            }),
+                            getComponent: () => require("@components/Wintry/Settings/pages/Plugins").default
                         },
                     }),
                     registerSettingRenderer("LUMI_THEMES", {
@@ -164,10 +157,7 @@ export default definePlugin({
                         IconComponent: PaintPaletteIcon,
                         screen: {
                             route: "LUMI_THEMES",
-                            getComponent: () => memo(() => {
-                                const WintryPage = require("@components/Wintry/Settings/pages/Themes").default;
-                                return <WintryPage />;
-                            }),
+                            getComponent: () => require("@components/Wintry/Settings/pages/Themes").default
                         },
                     }),
                     registerSettingRenderer("LUMI_DEVELOPER", {
@@ -176,10 +166,7 @@ export default definePlugin({
                         IconComponent: WrenchIcon,
                         screen: {
                             route: "LUMI_DEVELOPER",
-                            getComponent: () => memo(() => {
-                                const WintryPage = require("@components/Wintry/Settings/pages/Developer").default;
-                                return <WintryPage />;
-                            }),
+                            getComponent: () => require("@components/Wintry/Settings/pages/Developer").defaultq
                         },
                     }),
                 ],

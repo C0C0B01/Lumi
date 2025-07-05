@@ -1,16 +1,13 @@
 import { lookup } from "@metro";
 import { byWriteableProp } from "@metro/common/filters";
-import { lookupByProps } from "@metro/common/wrappers";
 import { getCurrentRef } from "../useThemeStore";
 import { getNativeModule } from "@native";
 import { patcher } from "#plugin-context";
 import { chroma } from "@metro/common/libraries";
-import { NativeThemeModule } from "src/native/index.ts";
 
-const tokensModule = lookupByProps("SemanticColor").asLazy();
 const isThemeModule = lookup(byWriteableProp("isThemeDark")).asLazy();
 
-export default function patchDefinitionAndResolver() {
+export default function patchDefinitionAndResolver(tokensModule: any) {
     const origRaw = { ...tokensModule.RawColor };
     const callback = ([theme]: any[]) => (theme === getCurrentRef()?.key ? [getCurrentRef()!.color.reference] : void 0);
 
@@ -27,7 +24,7 @@ export default function patchDefinitionAndResolver() {
 
     patcher.before(isThemeModule, "isThemeDark", callback);
     patcher.before(isThemeModule, "isThemeLight", callback);
-    //    patcher.before(NativeThemeModule, "updateTheme", callback);
+    //patcher.before(getNativeModule("NativeThemeModule"), "updateTheme", callback);
 
     patcher.instead(tokensModule.default.internal, "resolveSemanticColor", (args: any[], orig: any) => {
         const _colorRef = getCurrentRef();
@@ -36,7 +33,7 @@ export default function patchDefinitionAndResolver() {
 
         args[0] = _colorRef.color.reference;
 
-        const [name, colorDef] = extractInfo(_colorRef.color!.reference, args[1]);
+        const [name, colorDef] = extractInfo(tokensModule, _colorRef.color!.reference, args[1]);
 
         const semanticDef = _colorRef.color.semantic[name];
 
@@ -65,7 +62,7 @@ export default function patchDefinitionAndResolver() {
     });
 }
 
-function extractInfo(themeName: string, colorObj: any): [name: string, colorDef: any] {
+function extractInfo(tokensModule: any, themeName: string, colorObj: any): [name: string, colorDef: any] {
     // @ts-ignore - assigning to extractInfo._sym
     const propName = colorObj[(extractInfo._sym ??= Object.getOwnPropertySymbols(colorObj)[0])];
     const colorDef = tokensModule.SemanticColor[propName];
