@@ -1,7 +1,7 @@
-import type { WintryTheme } from "@plugins/_core/painter/types";
+import type { WintryTheme } from "@plugins/painter/types";
 import AddonPage from "../Addon";
 import { createAddonCollectionManager } from "../Addon/AddonCollectionManager";
-import { applyTheme, useThemeStore } from "@plugins/_core/painter/useThemeStore";
+import { applyTheme, useThemeStore } from "@plugins/painter/useThemeStore";
 
 const themeCollectionManager = createAddonCollectionManager<WintryTheme, "A-Z" | "Z-A", string>({
     data: () => useThemeStore.getState().themes,

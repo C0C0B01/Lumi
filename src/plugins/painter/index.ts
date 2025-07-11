@@ -7,7 +7,7 @@ import { patchSelectivelySyncedUserSettingsStore } from "./patches/stores";
 
 export default definePlugin({
     name: "Painter",
-    description: "Provides themes functionalities within Wintry",
+    description: "Provides themes functionalities within Lumi",
     authors: [Dev.Pylix, Dev.cocobo1],
     required: true,
     start() {
