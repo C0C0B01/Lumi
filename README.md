@@ -17,6 +17,8 @@ Discord: https://discord.gg/6cN7wKa8gp
 ## **Platform Support**
 Lumi is built for and only supported on *Android*
 
+Only Discord versions 288 and above are supported
+
 ## **Installation**
 
 - **Root** with Xposed - [LumiXposed](https://github.com/C0C0B01/LumiXposed/releases/latest)
@@ -62,4 +64,7 @@ Lumi is generally licensed under the [**GNU General Public License v3 (GPL-3)**]
 
 ### **Disclaimer**  
 Using **any** Discord client mod, including Lumi, is against Discord's **Terms of Service**. However, there have been no reports of Discord enforcing this rule unless there is actual **API abuse**, which Lumi opposes.
+
+## Stargazers
+[![Star History Chart](https://api.star-history.com/svg?repos=C0C0B01/Lumi&type=Date)](https://star-history.com/#bytebase/star-history&Date)
 
