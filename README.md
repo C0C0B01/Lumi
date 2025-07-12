@@ -17,7 +17,7 @@ Discord: https://discord.gg/6cN7wKa8gp
 ## **Platform Support**
 Lumi is built for and only supported on *Android*
 
-Only Discord versions 288 and above are supported
+Only Discord versions 288 alpha and above are supported
 
 ## **Installation**
 
