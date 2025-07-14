@@ -24,6 +24,8 @@ Only Discord versions 288 alpha and above are supported
 - **Root** with Xposed - [LumiXposed](https://github.com/C0C0B01/LumiXposed/releases/latest)
 - **Non-root** - [LumiManager](https://github.com/C0C0B01/LumiManager/releases/latest)
 
+If you dont know the difference, use Non-rooted
+
 ## Support Me
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/cocobo1)
 
