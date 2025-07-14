@@ -1,5 +1,5 @@
 > [!IMPORTANT]  
-> **This project is a work in progress!** Technical support is limited. While you are free to use this mod, expect potential bugs and incomplete features. Use at your own discretion.
+> **This project is a work in progress!** Technical support is limited. While you are free to use this mod, expect potential bugs and incomplete features. Use at your own discretion. the only people who should be using this is client mod enthusiast, theme makers and plugin developers
 
 # **Lumi**
 A fork of Wintry
@@ -15,14 +15,16 @@ Discord: https://discord.gg/6cN7wKa8gp
 	- ...many more coming down the road!
 
 ## **Platform Support**
-Lumi is built for and only supported on *Android*
+Lumi is built for and only supported on *Android*, iOS support is being thought about, however i do not have the knowledge or the experience required to do it, if you are interested in helping out consider reaching out :)
 
-Only Discord versions 288 and above are supported
+Only Discord versions 288 alpha and above are supported
 
 ## **Installation**
 
 - **Root** with Xposed - [LumiXposed](https://github.com/C0C0B01/LumiXposed/releases/latest)
 - **Non-root** - [LumiManager](https://github.com/C0C0B01/LumiManager/releases/latest)
+
+If you dont know the difference, use Non-rooted
 
 ## Support Me
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/cocobo1)
