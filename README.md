@@ -1,5 +1,5 @@
 > [!IMPORTANT]  
-> **This project is a work in progress!** Technical support is limited. While you are free to use this mod, expect potential bugs and incomplete features. Use at your own discretion.
+> **This project is a work in progress!** Technical support is limited. While you are free to use this mod, expect potential bugs and incomplete features. Use at your own discretion. the only people who should be using this is client mod enthusiast, theme makers and plugin developers
 
 # **Lumi**
 A fork of Wintry
