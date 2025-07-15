@@ -3,7 +3,7 @@ import { delay } from "es-toolkit";
 import { inspect } from "node-inspect-extracted";
 
 // WebSocket configuration, hardcoded for now
-const WS_HOST = "localhost";
+const WS_HOST = "192.168.0.157";
 const WS_PORT = 9090;
 
 // WebSocket connection manager

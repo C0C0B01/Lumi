@@ -28,6 +28,10 @@ export const NativeDeviceModule = __turboModuleProxy(
 ) as DiscordNativeModules.ClientInfoModule
 
 export const BundleUpdaterModule = getNativeModule("BundleUpdaterManager");
+export const ThemeModule = getNativeModule("NativeThemeModule");
+
+// React Native
+export const ImageLoader = getNativeModule("ImageLoader");
 
 export const NativeThemeModule = __turboModuleProxy(
     'NativeThemeModule',

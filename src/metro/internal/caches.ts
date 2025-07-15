@@ -55,7 +55,7 @@ function setupMetroCache() {
         serialized = {
             v: {
                 cache: CACHE_VERSION,
-                bundle: NativeClientInfoModule.getConstants().Build as any,
+                bundle: NativeClientInfoModule.getConstants().Build as number,
             },
             moduleFlags: {},
             lookupIndex: {},
@@ -86,7 +86,7 @@ function setupMetroCache() {
                 JSON.stringify({
                     v: {
                         cache: CACHE_VERSION,
-                        bundle: NativeClientInfoModule.getConstants().Build as any,
+                        bundle: NativeClientInfoModule.getConstants().Build as number,
                     },
                     moduleFlags: Object.fromEntries(cache.moduleFlags),
                     lookupIndex: Object.fromEntries(

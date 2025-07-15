@@ -33,10 +33,10 @@
  */
 
 import { useState } from "react";
-import { Image, View, type StyleProp, type ViewStyle } from "react-native";
+import { View, type StyleProp, type ViewStyle } from "react-native";
 import { t } from "@i18n";
-import { findAssetId } from "@api/assets";
 import TextInput from "../Discord/TextInput/TextInput";
+import { MagnifyingGlassIcon } from "@metro/common/icons";
 
 export interface SearchProps {
     queryRef?: ReturnType<typeof useSearchQuery>;
@@ -44,10 +44,6 @@ export interface SearchProps {
     placeholder?: string;
     style?: StyleProp<ViewStyle>;
     isRound?: boolean;
-}
-
-function SearchIcon() {
-    return <Image style={{ width: 16, height: 16 }} source={findAssetId("search")} />;
 }
 
 type SearchQueryRef = { query: string; __set: (value: string) => void };
@@ -73,7 +69,7 @@ export default ({ onChangeText, placeholder, style, isRound, queryRef }: SearchP
             <TextInput
                 grow={true}
                 isClearable={true}
-                leadingIcon={SearchIcon}
+                leadingIcon={MagnifyingGlassIcon}
                 placeholder={placeholder ?? t.ui.components.search.placeholder()}
                 onChange={onChange}
                 returnKeyType="search"
