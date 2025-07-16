@@ -2,8 +2,8 @@ import { definePlugin } from "#plugin-context";
 import { Dev } from "@data/constants";
 import { waitFor } from "@metro/internal/modules";
 import { byProps } from "@metro/common/filters";
-import patchDefinitionAndResolver from "@plugins/painter/patches/resolver";
-import { patchSelectivelySyncedUserSettingsStore } from "@plugins/painter/patches/stores";
+import patchDefinitionAndResolver from "@plugins/_core/painter/patches/resolver";
+import { patchSelectivelySyncedUserSettingsStore } from "@plugins/_core/painter/patches/stores";
 
 export default definePlugin({
 	name: "Painter Plus",

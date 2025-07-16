@@ -6,6 +6,7 @@ import { getNativeModule } from "@native";
 import { patcher } from "#plugin-context";
 import { chroma } from "@metro/common/libraries";
 import type { AnyRecord } from "@utils/types";
+import { hasInitialThemeStateBeenRestored } from "./stores";
 
 const tokensModule = lookupByProps("SemanticColor").asLazy();
 const isThemeModule = lookup(byWriteableProp("isThemeDark")).asLazy();
@@ -19,6 +20,7 @@ export default function patchDefinitionAndResolver() {
             configurable: true,
             enumerable: true,
             get: () => {
+                if (!hasInitialThemeStateBeenRestored) return origRaw[key];
                 const ret = getCurrentRef()?.color.raw[key];
                 return ret || origRaw[key];
             },

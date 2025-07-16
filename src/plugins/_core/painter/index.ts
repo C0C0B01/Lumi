@@ -4,6 +4,7 @@ import { waitFor } from "@metro/internal/modules";
 import { byProps } from "@metro/common/filters";
 import patchDefinitionAndResolver from "./patches/resolver";
 import { patchSelectivelySyncedUserSettingsStore } from "./patches/stores";
+import { applyTheme, useThemeStore } from "./useThemeStore";
 
 export default definePlugin({
     name: "Painter",
@@ -14,6 +15,7 @@ export default definePlugin({
         waitFor(byProps(["SemanticColor"]), () => {
             patchDefinitionAndResolver();
             patchSelectivelySyncedUserSettingsStore();
+            applyTheme(useThemeStore.getState().appliedTheme, false);
         });
     },
 });

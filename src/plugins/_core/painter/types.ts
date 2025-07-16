@@ -31,7 +31,7 @@ export interface WintryTheme {
     asAddonMetadata(): AddonMetadata;
 }
 
-interface ThemeDisplay {
+export interface ThemeDisplay {
     name: string;
     description: string;
     authors: {

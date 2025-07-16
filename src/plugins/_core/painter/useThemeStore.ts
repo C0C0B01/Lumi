@@ -6,16 +6,14 @@ import { lookupByProps } from "@metro/common/wrappers";
 import { createJSONStorage, persist } from "zustand/middleware";
 import { kvStorage } from "@loader/kvStorage";
 import { memoize } from "es-toolkit";
-import { DEBUG_THEME } from "./themes/Debug Theme";
 import { MOCHA_THEME } from "./themes/Chadpuccin Mocha";
 import { ROSIE_PINK_THEME } from "./themes/Rosie Pink";
 import { EYE_CANDY_THEME } from "./themes/Eye Candy";
 import { CLEAR_VISION_THEME } from "./themes/Clear Vision";
 
 const Themes = [MOCHA_THEME, ROSIE_PINK_THEME, EYE_CANDY_THEME, CLEAR_VISION_THEME]
-// const Themes = [DEBUG_THEME]
 
-const logger = wtlogger.createChild("useThemeStore");
+const logger = wtlogger.createChild("ThemeStore");
 const formDividerModule = lookupByProps("DIVIDER_COLORS");
 
 const tokenRefModule = lookupByProps("SemanticColor");
@@ -34,7 +32,7 @@ interface ThemeRefState {
     color: ReturnType<typeof parseColorManifest>;
 }
 
-let _inc = 0;
+let _inc = 4;
 
 export function getCurrentRef() {
     return useThemeStore.getState().currentRef;
@@ -131,6 +129,3 @@ export const useThemeStore = create(
         },
     ),
 );
-
-// Apply our custom theme on startup
-applyTheme(useThemeStore.getState().appliedTheme, false);
