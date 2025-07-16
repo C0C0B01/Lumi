@@ -12,6 +12,8 @@ Discord: https://discord.gg/6cN7wKa8gp
 	- ExpressionUtils - a.k.a. EmoteCloner
 	- ChatBubbles - you never have seen this before
 	- NoTrack - out-of-the-box
+	- Dashless - removes dashes from channel names
+	- Always-Trust - removes link opening confirmations
 	- ...many more coming down the road!
 
 ## **Platform Support**
