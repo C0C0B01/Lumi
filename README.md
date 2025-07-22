@@ -1,6 +1,9 @@
 > [!IMPORTANT]  
 > **This project is a work in progress!** Technical support is limited. While you are free to use this mod, expect potential bugs and incomplete features. Use at your own discretion. the only people who should be using this is client mod enthusiast, theme makers and plugin developers
 
+**Response to [Wintry Forks statement](https://github.com/amsyarasyiq/wintry/commit/dcb2cd242dd0e6a36e796055c83fe186370143a5)
+ive just gone ahead and removed all donation links from the project. when I added them I was under the impression wintry was not going to be receiving updates. as for features from development branches, the project is in a work in progress state and i also prefer everything to be bleeding edge so adding the features was a choice I made. I am open to discussion on the status of this project :)
+
 # **Lumi**
 A fork of Wintry
 
