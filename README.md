@@ -28,11 +28,6 @@ Lumi is built for and only supported on *Android*, iOS support is being thought 
 
 If you dont know the difference, use Non-rooted
 
-## Support Me
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/cocobo1)
-
-Please do not donate if you are not able to, if you are able to please don't donate much :)
-
 ## Contributing
 We welcome contributions from the community! Whether you're fixing bugs, adding new features, or improving documentation, your help is greatly appreciated. Please make sure to review our [contributing guidelines](./CONTRIBUTING.md) before getting started.
 ## FAQs
