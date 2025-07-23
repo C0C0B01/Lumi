@@ -1,5 +1,5 @@
 > [!IMPORTANT]  
-> **This project is a work in progress!** Technical support is limited. While you are free to use this mod, expect potential bugs and incomplete features. Use at your own discretion. the only people who should be using this is client mod enthusiast, theme makers and plugin developers
+> **This project is what i consider a mix between Work-In-Progress and Bleeding Edge!** Support can be found on the [Lumi Discord Server](https://discord.gg/6cN7wKa8gp) and issue reports can be made there or on the github. If you do not want to use this mod due to the Work-In-Progress state/it being bleeding edge, try my other mod [Kettu](https://github.com/C0C0B01/Kettu) or [Wintry](https://github.com/amsyarasyiq/wintry) the project Lumi is based on!
 
 # **Response to [Wintry Forks statement](https://github.com/amsyarasyiq/wintry/commit/dcb2cd242dd0e6a36e796055c83fe186370143a5)**
 
@@ -31,27 +31,6 @@ Lumi is built for and only supported on *Android*, iOS support is being thought 
 - **Non-root** - [LumiManager](https://github.com/C0C0B01/LumiManager/releases/latest)
 
 If you dont know the difference, use Non-rooted
-
-## Contributing
-We welcome contributions from the community! Whether you're fixing bugs, adding new features, or improving documentation, your help is greatly appreciated. Please make sure to review our [contributing guidelines](./CONTRIBUTING.md) before getting started.
-## FAQs
-
-<details>
-  <summary>
-	  <b>Is Lumi a good replacement?</b>
-  </summary>
-
-Depends. If you value plugin stability over variety, Lumi may be a good replacement for you. Lumi is first-party focused, meaning there may be fewer plugins available compared to other client mods, but they will be more stable and reliable.
-</details>
-
-<details>
-  <summary>
-	  <b>Will Lumi ever support third-party plugins?</b>
-  </summary>
-
-This is the plan
-
-</details>
 
 ## Related & Notices
 
