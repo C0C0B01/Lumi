@@ -47,6 +47,9 @@ Lumi is generally licensed under the [**GNU General Public License v3 (GPL-3)**]
 ### **Disclaimer**  
 Using **any** Discord client mod, including Lumi, is against Discord's **Terms of Service**. However, there have been no reports of Discord enforcing this rule unless there is actual **API abuse**, which Lumi opposes.
 
+### **Contributing**
+If you are interested in contributing, thanks! There is infomation on how to contribute check out the contributing guidelines. Contributing can be a new theme, plugin or just a bugfix
+
 ## Stargazers
 [![Star History Chart](https://api.star-history.com/svg?repos=C0C0B01/Lumi&type=Date)](https://star-history.com/#bytebase/star-history&Date)
 
