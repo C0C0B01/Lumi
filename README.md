@@ -1,29 +1,6 @@
-> [!IMPORTANT]  
-> **This project is what i consider a mix between Work-In-Progress and Bleeding Edge!** Support can be found on the [Lumi Discord Server](https://discord.gg/6cN7wKa8gp) and issue reports can be made there or on the github. If you do not want to use this mod due to the Work-In-Progress state/it being bleeding edge, try my other mod [Kettu](https://github.com/C0C0B01/Kettu) or [Wintry](https://github.com/amsyarasyiq/wintry) the project Lumi is based on!
-
-# **Response to [Wintry Forks statement](https://github.com/amsyarasyiq/wintry/commit/dcb2cd242dd0e6a36e796055c83fe186370143a5)**
-
-ive just gone ahead and removed all donation links from the project. when I added them I was under the impression wintry was not going to be receiving updates. as for features from development branches, the project is in a work in progress state and i also prefer everything to be bleeding edge so adding the features was a choice I made. I am open to discussion on the status of this project :)
-
 # **Lumi**
-A fork of Wintry
 
 Discord: https://discord.gg/6cN7wKa8gp
-
-## Features
-- Built-in plugins:
-	- Experiments - you probably know what this is
-	- ExpressionUtils - a.k.a. EmoteCloner
-	- ChatBubbles - you never have seen this before
-	- NoTrack - out-of-the-box
-	- Dashless - removes dashes from channel names
-	- Always-Trust - removes link opening confirmations
-	- ...many more coming down the road!
-
-## **Platform Support**
-Lumi is built for and only supported on *Android*, iOS support is being thought about, however i do not have the knowledge or the experience required to do it, if you are interested in helping out consider reaching out :)
-
-**Only Discord versions 288 alpha and above are supported**
 
 ## **Installation**
 
@@ -31,25 +8,3 @@ Lumi is built for and only supported on *Android*, iOS support is being thought 
 - **Non-root** - [LumiManager](https://github.com/C0C0B01/LumiManager/releases/latest)
 
 If you dont know the difference, use Non-rooted
-
-## Related & Notices
-
-### **Similar Projects**
-If some parts of Lumi tick you off for some reason, there are other alternatives you can check out:
-- [**Kettu**](https://github.com/C0C0B01/Kettu) *(sister project)*  
-- [**Bunny**](https://github.com/bunny-mod/Bunny) *(ancestor)*  
-- [**Revenge**](https://github.com/revenge-mod/)  
-- [**Unbound**](https://github.com/unbound-mod/)  
-
-### **License**  
-Lumi is generally licensed under the [**GNU General Public License v3 (GPL-3)**](http://www.gnu.org/copyleft/gpl.html). Some parts of the codebase may have different licenses.
-
-### **Disclaimer**  
-Using **any** Discord client mod, including Lumi, is against Discord's **Terms of Service**. However, there have been no reports of Discord enforcing this rule unless there is actual **API abuse**, which Lumi opposes.
-
-### **Contributing**
-If you are interested in contributing, thanks! There is infomation on how to contribute check out the contributing guidelines. Contributing can be a new theme, plugin or just a bugfix
-
-## Stargazers
-[![Star History Chart](https://api.star-history.com/svg?repos=C0C0B01/Lumi&type=Date)](https://star-history.com/#bytebase/star-history&Date)
-
